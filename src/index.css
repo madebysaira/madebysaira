@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+
+  /* Extra-small caption size used by portfolio card CTAs */
+  --text-2xs: 0.625rem;
+  --text-2xs--line-height: 1rem;
+
+  --color-cosmic-void: #010103;
+  --color-cosmic-navy: #060612;
+  --color-cosmic-blue: #0b0f24;
+  --color-cosmic-border: rgba(255, 255, 255, 0.1);
+  --color-cosmic-white: #f8fafc;
+}
+
+html {
+  scroll-padding-top: 4rem;
+}
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 0;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-cosmic-void);
+  background-image: radial-gradient(circle at 50% 50%, var(--color-cosmic-blue) 0%, var(--color-cosmic-navy) 50%, var(--color-cosmic-void) 100%);
+  background-attachment: fixed;
+  color: #e2e8f0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cosmic-void);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Sharp geometry helper */
+.sharp-border {
+  border-radius: 0px;
+  border: 1px solid var(--color-cosmic-border);
+}
+
+.sharp-button {
+  border-radius: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: var(--color-cosmic-white);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sharp-button:hover {
+  border-color: var(--color-cosmic-white);
+  background: var(--color-cosmic-white);
+  color: var(--color-cosmic-void);
+}
+
+/* Subtle typography enhancements */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.no-hyphens {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+}
+
+/* Print Overrides for Resume PDF */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide screen-only interactive elements */
+  .no-print,
+  aside,
+  header,
+  footer,
+  button,
+  .fuzzy-overlay,
+  #splash-cursor,
+  .cat-cursor-container {
+    display: none !important;
+  }
+
+  /* Remove layout padding for printed pages */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .print-reset-layout {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    min-height: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+  }
+
+  /* Force layout to keep double column layout intact in PDF without breaking Grid */
+  .print-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+  }
+
+  .print-col-4 {
+    width: 32% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .print-col-8 {
+    width: 63% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  /* Header compacting for print */
+  .print-header-border {
+    border-bottom: 1.5px solid #000000 !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .print-name {
+    font-size: 20pt !important;
+    line-height: 1.1 !important;
+    font-weight: 900 !important;
+    color: #000000 !important;
+  }
+
+  .print-subtitle {
+    font-size: 8pt !important;
+    margin-top: 0.25rem !important;
+    color: #374151 !important;
+  }
+
+  .print-contact-info {
+    font-size: 7.5pt !important;
+    gap: 0.15rem !important;
+    align-items: flex-end !important;
+    color: #374151 !important;
+  }
+
+  .print-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Text styles for print */
+  .print-text-dark,
+  .print-text-dark * {
+    color: #000000 !important;
+    font-size: 8.5pt !important;
+  }
+
+  .print-text-muted,
+  .print-text-muted * {
+    color: #374151 !important;
+    font-size: 8.5pt !important;
+  }
+
+  .print-section-title {
+    font-size: 8pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.25rem !important;
+    color: #4b5563 !important;
+  }
+
+  .print-item-title {
+    font-size: 9pt !important;
+    font-weight: 850 !important;
+    color: #000000 !important;
+  }
+
+  .print-item-desc {
+    font-size: 8pt !important;
+    line-height: 1.35 !important;
+    color: #1f2937 !important;
+    margin-top: 0.15rem !important;
+  }
+
+  .print-col-gap {
+    gap: 0.75rem !important;
+  }
+
+  .print-border-muted,
+  .print-border-muted * {
+    border-color: #9ca3af !important;
+  }
+
+  /* Prevent blocks from breaking mid-item across PDF pages */
+  .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Specific typography sizing adjustments for PDF */
+  .print-text-xs {
+    font-size: 8.5pt !important;
+  }
+}
