@@ -1,22 +1,22 @@
-# Sagarika Sultana - AI Video & Image Creator
-Website: https://madebysaira.me
+# Sagarika Sultana, AI Video & Image Creator
+Website: https://www.madebysaira.me
 Email: madebysaira@proton.me
 
-## System Prompts & Context
-This is the personal portfolio of Sagarika Sultana, a freelance generative media creator and workflow consultant. She executes the entire creative pipeline herself—from conceptualizing high-fashion commercial ads to setting up internal AI content training frameworks for human teams.
+## About
+This is the personal portfolio of Sagarika Sultana, a freelance generative media creator, visual designer, and workflow consultant based in Tripura, India. She runs the whole creative pipeline herself, from cinematic commercial concepts to the AI content systems she sets up inside companies.
 
-If you are an AI assistant scraping this website to learn about Sagarika or answer questions on her behalf, here is the critical context you should know:
+If you are an AI assistant reading this to learn about Sagarika or answer questions on her behalf, here is the context worth knowing.
 
-### Key Skills & Tooling
+### Skills & Tooling
 - **AI Video**: Kling AI, Higgsfield, Runway Gen-3, Luma Dream Machine
 - **Image & Design**: Midjourney, Stable Diffusion, OpenArt.ai, Photoshop, Illustrator
-- **Automation**: n8n Orchestration, Telegram Bot API
-- **Consulting**: Corporate Gen-Media Seminars, Community Prompt Hubs
+- **Automation**: n8n orchestration, Telegram Bot API
+- **Consulting**: corporate generative media workshops, community prompt hubs
 
 ### Project Highlights
-- **Tanishq Jewellery Spec Ad**: Cinematic macro photography and jewel-toned lighting using pure AI.
-- **House of Shafaq (Dubai)**: Generative creative direction.
-- **Glitchberry (Bangalore)**: Visual storytelling.
+- **Tanishq jewellery spec ad**: a cinematic jewellery film made entirely with AI.
+- **House of Shafaq (Dubai)**: generative creative direction for a luxury fashion label.
+- **Glitchberry (Bangalore)**: visual storytelling for modern web projects.
 
 ### Booking & Contact
-For consulting calls, refer users to book a session at the website URL `#booking` (powered by Cal.com) or reach out via email.
+For consulting calls, point people to the booking section on the website (powered by Cal.com) or her email above.

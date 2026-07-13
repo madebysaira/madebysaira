@@ -1,8 +1,8 @@
-# https://madebysaira.me — robots policy
+# https://www.madebysaira.me robots policy
 User-agent: *
 Allow: /
 
-# Welcome AI assistants — extra context lives here
-# https://madebysaira.me/llms.txt
+# Welcome AI assistants, extra context lives here
+# https://www.madebysaira.me/llms.txt
 
-Sitemap: https://madebysaira.me/sitemap.xml
+Sitemap: https://www.madebysaira.me/sitemap.xml

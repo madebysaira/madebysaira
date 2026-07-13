@@ -83,8 +83,8 @@ export default function Resume({ onBack }) {
               >
                 madebysaira@proton.me <Mail size={10} />
               </a>
-              <a 
-                href="https://madebysaira.me"
+              <a
+                href="https://www.madebysaira.me"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors duration-200 flex items-center gap-1.5 print-text-dark"
@@ -123,7 +123,7 @@ export default function Resume({ onBack }) {
                 // Profile Summary
               </h2>
               <p className="text-xs text-slate-300 leading-relaxed print-text-dark">
-                Freelance generative media director, designer, and workflow consultant executing complete digital production pipelines. Specializing in high-end commercial concepts, AI-driven visual direction, interactive frontend development, and automated operations. Certified in GenAI Data Analytics, using a strong background in Philosophy to drive logical system architectures and rapid learning velocities.
+                Freelance generative media director, designer, and workflow consultant. I run complete production pipelines on my own, from commercial concepts and visual direction to interactive frontends and light automation. Certified in GenAI Data Analytics, with a Philosophy degree that taught me to think in clear systems and pick up new tools fast.
               </p>
             </div>
 
@@ -133,7 +133,7 @@ export default function Resume({ onBack }) {
                 // Philosophy
               </h2>
               <p className="text-xs text-slate-300 leading-relaxed italic border-l border-white/20 pl-3 print-text-muted print-border-muted">
-                "Figure It Out Velocity. The digital landscape shifts weekly; my greatest asset is the speed-of-learning and jumping straight into the trenches."
+                "Figure it out velocity. The tools shift every week, so my real asset is how quickly I learn and how happily I jump straight in."
               </p>
             </div>
 
@@ -222,8 +222,8 @@ export default function Resume({ onBack }) {
                   </div>
                   <p className="text-xs text-slate-400 font-mono mt-1 print-text-muted">Creative Director & Generative Media Creator</p>
                   <ul className="list-disc pl-4 text-xs text-slate-300 mt-2 space-y-1 print-item-desc">
-                    <li>Designed and conceptualized premium spec commercial sequences blending traditional Indian couture with advanced macro-jewelry lighting setups.</li>
-                    <li>Utilized text-to-video and image-to-video pipelines to execute high-fidelity visual assets, reducing production time by 80% compared to typical physical studio shoots.</li>
+                    <li>Designed a premium spec commercial that blends traditional Indian couture with close up, jewel lit product shots.</li>
+                    <li>Used text to video and image to video pipelines to produce the whole piece, cutting production time by roughly 80 percent versus a physical studio shoot.</li>
                   </ul>
                 </div>
 
@@ -237,8 +237,8 @@ export default function Resume({ onBack }) {
                   </div>
                   <p className="text-xs text-slate-400 font-mono mt-1 print-text-muted">Visual Concept Artist & Video Editor</p>
                   <ul className="list-disc pl-4 text-xs text-slate-300 mt-2 space-y-1 print-item-desc">
-                    <li>Produced dynamic athletic motion campaigns and strength-training visual loops utilizing state-of-the-art physics-consistent generative models.</li>
-                    <li>Managed precise frame editing, sound layouts, and speed ramps to construct cohesive brand stories.</li>
+                    <li>Produced athletic motion campaigns and strength training loops using current generative models that keep the physics believable.</li>
+                    <li>Handled the frame by frame editing, sound layout, and speed ramps that hold the story together.</li>
                   </ul>
                 </div>
 
@@ -246,13 +246,13 @@ export default function Resume({ onBack }) {
                 <div className="border-l border-white/10 pl-4 print-border-muted print-avoid-break">
                   <div className="flex justify-between items-start">
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider print-item-title">
-                      Campa Cola Retro spec Campaign
+                      Campa Cola Retro Spec Campaign
                     </h3>
                     <span className="text-[10px] font-mono text-slate-400 print-text-muted">2026</span>
                   </div>
                   <p className="text-xs text-slate-400 font-mono mt-1 print-text-muted">AI Video Editor</p>
                   <ul className="list-disc pl-4 text-xs text-slate-300 mt-2 space-y-1 print-item-desc">
-                    <li>Designed a vintage-modern 8-second commercial spec concept demonstrating rapid asset compilation from static layout sketches to premium motion deliverables.</li>
+                    <li>Designed an eight second spec concept with a vintage feel, taking it from flat layout sketches to a finished motion piece.</li>
                   </ul>
                 </div>
 
@@ -260,14 +260,14 @@ export default function Resume({ onBack }) {
                 <div className="border-l border-white/10 pl-4 print-border-muted print-avoid-break">
                   <div className="flex justify-between items-start">
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider print-item-title">
-                      It's Juicy World — Interactive Quiz Web App
+                      It's Juicy World, Interactive Quiz Web App
                     </h3>
                     <span className="text-[10px] font-mono text-slate-400 print-text-muted">2026</span>
                   </div>
                   <p className="text-xs text-slate-400 font-mono mt-1 print-text-muted">Lead AI Developer & Frontend Architect</p>
                   <ul className="list-disc pl-4 text-xs text-slate-300 mt-2 space-y-1 print-item-desc">
-                    <li>Engineered and deployed an interactive 5-question wellness personality engine using React, Tailwind CSS, and Vite (personalitydrinks.netlify.app).</li>
-                    <li>Translated customer behavioral data into dynamic wellness recommendations, connecting physical routines with custom organic beverage formulations.</li>
+                    <li>Built and shipped an interactive five question wellness quiz with React, Tailwind CSS, and Vite (personalitydrinks.netlify.app).</li>
+                    <li>Turned each set of answers into a drink recommendation, matching someone's routine to a custom organic beverage.</li>
                   </ul>
                 </div>
 
@@ -275,14 +275,14 @@ export default function Resume({ onBack }) {
                 <div className="border-l border-white/10 pl-4 print-border-muted print-avoid-break">
                   <div className="flex justify-between items-start">
                     <h3 className="text-sm font-bold text-white uppercase tracking-wider print-item-title">
-                      Hornbill Restaurant — Brand Identity System
+                      Hornbill Restaurant, Brand Identity System
                     </h3>
                     <span className="text-[10px] font-mono text-slate-400 print-text-muted">2026</span>
                   </div>
                   <p className="text-xs text-slate-400 font-mono mt-1 print-text-muted">Lead Brand & Social Designer</p>
                   <ul className="list-disc pl-4 text-xs text-slate-300 mt-2 space-y-1 print-item-desc">
-                    <li>Designed the comprehensive brand styling, color guidelines, and social grid layouts for Agartala's premier culinary venue (instagram.com/hornbill223).</li>
-                    <li>Developed and scheduled high-fashion food concepts and promotional campaign graphics using advanced generative imaging assets.</li>
+                    <li>Designed the full brand styling, colour guidelines, and social grid for one of Agartala's best known restaurants (instagram.com/hornbill223).</li>
+                    <li>Created and scheduled the food concepts and promo graphics, using generative imaging to keep the whole feed consistent.</li>
                   </ul>
                 </div>
 
@@ -303,7 +303,7 @@ export default function Resume({ onBack }) {
                     Corporate AI Workflow Consulting & Upskilling
                   </h3>
                   <p className="text-xs text-slate-300 mt-1.5 leading-relaxed print-item-desc">
-                    Deliver intensive training workshops to corporate teams on integrating generative media (Kling AI, Higgsfield, Stable Diffusion, Photoshop Generative Fill) into legacy graphic design pipelines, boosting operational velocity.
+                    Run hands on workshops that help teams fold generative media (Kling AI, Higgsfield, Stable Diffusion, Photoshop Generative Fill) into the design work they already do, so they genuinely move faster.
                   </p>
                 </div>
 
@@ -313,7 +313,7 @@ export default function Resume({ onBack }) {
                     WhatsApp Photoshoot Prompt Community
                   </h3>
                   <p className="text-xs text-slate-300 mt-1.5 leading-relaxed print-item-desc">
-                    Founded and manage a community distribution channel (100+ prompt engineers) focused on sharing hyper-detailed, verified prompt engine strings for realistic human image synthesis and fashion photography.
+                    Started and still run a channel of more than 100 prompt writers, where I share detailed, tested prompts for realistic people and fashion photography.
                   </p>
                 </div>
 
@@ -323,7 +323,7 @@ export default function Resume({ onBack }) {
                     Telegram API Event Automations (n8n Lab)
                   </h3>
                   <p className="text-xs text-slate-300 mt-1.5 leading-relaxed print-item-desc">
-                    Orchestrated custom backend event schedulers using n8n node systems and the Telegram Bot API to automate client notifications and routine workflow reminders.
+                    Built custom event schedulers with n8n and the Telegram Bot API to handle client notifications and routine reminders on their own.
                   </p>
                 </div>
 
@@ -345,7 +345,7 @@ export default function Resume({ onBack }) {
                   </h3>
                   <p className="text-xs text-slate-400 font-mono mt-1 print-text-muted">Generative Creative Direction</p>
                   <p className="text-xs text-slate-300 mt-1.5 leading-relaxed print-item-desc">
-                    Constructed high-end visual concepts and digital assets for luxury fashion branding campaigns.
+                    Built premium visual concepts and digital assets for luxury fashion campaigns.
                   </p>
                 </div>
 
@@ -367,7 +367,7 @@ export default function Resume({ onBack }) {
                   </h3>
                   <p className="text-xs text-slate-400 font-mono mt-1 print-text-muted">Global Operations</p>
                   <p className="text-xs text-slate-300 mt-1.5 leading-relaxed print-item-desc">
-                    Consistently deliver high-impact generative content, custom graphic icons, and complete AI video campaigns for clients worldwide.
+                    Deliver generative content, custom icons, and full AI video campaigns for clients worldwide, with the ratings to back it up.
                   </p>
                 </div>
 

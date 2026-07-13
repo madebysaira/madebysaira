@@ -142,8 +142,8 @@ export default function Services() {
   const services = [
     {
       id: '01',
-      title: 'High-End Creative Direction & AI Visuals',
-      description: 'I command cutting-edge generative video and image models to craft cinematic narratives, premium commercial spec ads, and high-impact visual design assets.',
+      title: 'Creative Direction and AI Visuals',
+      description: 'I use the latest video and image models to make cinematic stories, commercial spec ads, and visual assets that look like a brand actually paid for them.',
       features: [
         <span>Commercial Concepts (Tanishq, Horlicks, Campco)</span>,
         <span>Brand Identity & Socials (<a href="https://www.instagram.com/hornbill223?igsh=MXZ1a3hjMmxiOXl6Zg==" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Hornbill Restaurant</a>)</span>,
@@ -162,11 +162,11 @@ export default function Services() {
     {
       id: '02',
       title: 'Interactive Frontend Production',
-      description: 'I love transforming creative, static brand briefs into fully functional, high-conversion web experiences.',
+      description: 'I like turning a flat brand brief into a real website that people can click through and actually enjoy using.',
       features: [
         <span>Personality Drinks Web App</span>,
         <span>Custom CSS Animation & Live Particles</span>,
-        <span>Deep-linked Mobile UPI Intents</span>
+        <span>Mobile UPI Deep Links</span>
       ],
       tools: [
         { name: 'React' },
@@ -178,7 +178,7 @@ export default function Services() {
     {
       id: '03',
       title: 'AI Training & Workflow Integration',
-      description: 'Because tools are useless without a strategy, I map out tech pipelines and upskill teams to integrate AI seamlessly into their operations.',
+      description: 'Tools are useless without a plan, so I map out the workflow and get teams comfortable using AI in their day to day, not just admiring it in a demo.',
       features: [
         <span>Corporate Training & Consulting Sessions</span>,
         <span>Claude for Directing & Content Management</span>,
@@ -199,7 +199,7 @@ export default function Services() {
   const experiments = [
     {
       title: 'n8n Reminder Bot',
-      description: 'A personal experiment where I tinkered with n8n orchestration to build and wire an automatic reminder bot inside Telegram.',
+      description: 'A little side project. I wired up n8n to run a reminder bot inside Telegram, mostly to see how far I could push it.',
       link: 'https://t.me/madeby_saira_bot',
       tag: 'n8n + Telegram API',
       icon: <Send size={16} />,
@@ -207,7 +207,7 @@ export default function Services() {
     },
     {
       title: 'WhatsApp Photoshoot Prompt Hub',
-      description: 'Built a specialized prompt channel sharing custom engine strings for realistic human generation, mastering prompting & community distribution.',
+      description: 'A channel where I share my own prompt recipes for realistic people and photoshoots. It taught me a lot about prompting and about running a community.',
       link: 'https://whatsapp.com/channel/0029Vb68gUsCnA7lQPkhYw45',
       tag: 'Prompt Engineering',
       icon: <MessageSquare size={16} />,
@@ -227,10 +227,10 @@ export default function Services() {
         {/* Header */}
         <div className="mb-16">
           <p className="text-xs font-mono tracking-widest text-slate-400 uppercase mb-3">
-            // My Expertise & Integrations
+            // What I Actually Do
           </p>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">
-            Pillars of Value
+            How I Can Help
           </h2>
         </div>
 
@@ -310,10 +310,10 @@ export default function Services() {
         <div className="pt-16 border-t border-cosmic-border">
           <div className="mb-10">
             <p className="text-xs font-mono tracking-widest text-slate-400 uppercase mb-3">
-              // Proven Track Record
+              // People I've Worked With
             </p>
             <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight uppercase">
-              Global Clients & Freelance Hustle
+              Clients Around the World
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -325,7 +325,7 @@ export default function Services() {
                 <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-1.5">House of Shafaq <ArrowUpRight size={14} className="opacity-50" /></h4>
                 <p className="text-slate-400 text-[10px] font-mono tracking-widest uppercase">Dubai</p>
                 <p className="text-slate-300 text-xs md:text-sm mt-3 leading-relaxed font-sans font-normal">
-                  Delivered premium visual assets and generative creative direction.
+                  Premium visual assets and generative creative direction for a luxury fashion label.
                 </p>
               </a>
             </Reveal>
@@ -338,7 +338,7 @@ export default function Services() {
                 <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-1.5">Glitchberry <ArrowUpRight size={14} className="opacity-50" /></h4>
                 <p className="text-slate-400 text-[10px] font-mono tracking-widest uppercase">Bangalore</p>
                 <p className="text-slate-300 text-xs md:text-sm mt-3 leading-relaxed font-sans font-normal">
-                  Collaborated on cutting-edge digital aesthetics and dynamic visual storytelling for modern web experiences.
+                  Worked together on digital aesthetics and visual storytelling for modern web projects.
                 </p>
               </a>
             </Reveal>
@@ -351,7 +351,7 @@ export default function Services() {
                 <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-1.5">Fiverr <ArrowUpRight size={14} className="opacity-50" /></h4>
                 <p className="text-slate-400 text-[10px] font-mono tracking-widest uppercase">Global</p>
                 <p className="text-slate-300 text-xs md:text-sm mt-3 leading-relaxed font-sans font-normal">
-                  Top-rated freelance work handling bespoke designs and AI video campaigns.
+                  Top rated freelance work, from custom design to full AI video campaigns.
                 </p>
               </a>
             </Reveal>
@@ -362,10 +362,10 @@ export default function Services() {
         <div className="pt-16 border-t border-cosmic-border mt-16">
           <div className="mb-10">
             <p className="text-xs font-mono tracking-widest text-slate-400 uppercase mb-3">
-              // Custom Tools & Orchestration Labs
+              // Little Experiments
             </p>
             <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight uppercase">
-              Orchestrations & Live Feeds
+              Things I Build for Fun
             </h2>
           </div>
 

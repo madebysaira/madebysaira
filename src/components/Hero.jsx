@@ -99,7 +99,7 @@ export default function Hero({ setView }) {
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 text-base md:text-lg text-slate-400 max-w-xl font-normal leading-relaxed"
         >
-          Think of me as a complete digital production studio in a single person. I handle the entire creative pipeline from initial concept to final render. I craft high-fashion commercial campaigns with photorealistic styling (because no brand should look like a low-res video game from 2004) and set up internal AI content systems to upskill corporate teams. It is premium art direction backed by modern automation, built to scale.
+          Think of me as a full production studio in one person. I take a project from the first spark of an idea all the way to the final export, and I look after every step in between. Most days that means building high fashion commercial campaigns that actually look real, or setting up AI content systems that help teams create faster without losing their taste. It is proper art direction, with automation doing the heavy lifting behind it.
         </motion.p>
 
         {/* CTA Buttons */}

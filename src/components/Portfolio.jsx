@@ -323,7 +323,7 @@ export default function Portfolio() {
   const linkedinPosts = [
     {
       title: "Tanishq Jewellery Spec Campaign",
-      subtitle: "Cinematic Jewelry / Spec Ad Campaign",
+      subtitle: "A cinematic jewellery spot, made entirely with AI",
       videoUrl: "/videos/tanishq.mp4",
       poster: "/images/posters/tanishq.jpg",
       url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_tanishq-aiadvertising-aivideo-activity-7465417409286344704-v9JY",
@@ -332,7 +332,7 @@ export default function Portfolio() {
     },
     {
       title: "Horlicks Pro Fitness Spec Campaign",
-      subtitle: "Fitness Storytelling / Spec Ad Concept",
+      subtitle: "A fitness story told in one short spec ad",
       videoUrl: "/videos/horlicks.mp4",
       poster: "/images/posters/horlicks.jpg",
       url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_specad-aiadvertising-creativedirection-activity-7465438959947632642-DOwl",
@@ -341,7 +341,7 @@ export default function Portfolio() {
     },
     {
       title: "Campa Cola Spec Campaign",
-      subtitle: "8-Second Retro-Modern Ad Concept",
+      subtitle: "An eight second retro cola concept",
       videoUrl: "/videos/campacola.mp4",
       poster: "/images/posters/campacola.jpg",
       url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_campacola-aiadvertising-aivideo-activity-7465407257623666688-VfiS",
@@ -353,19 +353,19 @@ export default function Portfolio() {
   const instagramReels = [
     {
       title: "Revenge Part 1",
-      subtitle: "Fictional Series Concept / Higgsfield AI",
+      subtitle: "A short fictional series concept, built in Higgsfield",
       embedUrl: "https://www.instagram.com/reel/DXZ0nOQErir/embed/",
       url: "https://www.instagram.com/reel/DXZ0nOQErir/",
     },
     {
       title: "Cinematic Dreamscape",
-      subtitle: "Atmospheric Visuals / Higgsfield Seedance 2.0",
+      subtitle: "Atmospheric visuals made with Higgsfield Seedance 2.0",
       embedUrl: "https://www.instagram.com/reel/DXRIMkqkQXU/embed/",
       url: "https://www.instagram.com/reel/DXRIMkqkQXU/",
     },
     {
       title: "VEXA Character Concept",
-      subtitle: "Futuristic VFX Character Transformation",
+      subtitle: "A futuristic character transformation, driven by VFX",
       embedUrl: "https://www.instagram.com/reel/DXUCLZRElT2/embed/",
       url: "https://www.instagram.com/reel/DXUCLZRElT2/",
     },
@@ -373,22 +373,22 @@ export default function Portfolio() {
 
   const aiWebApps = [
     {
-      title: "It's Juicy World — Personality Drinks",
-      subtitle: "Interactive Fitness Personality Quiz Web App",
+      title: "It's Juicy World, Personality Drinks",
+      subtitle: "A playful personality quiz, built as a web app",
       imageUrl: "/images/juicy_world_mockup.png",
       url: "https://personalitydrinks.netlify.app/",
-      description: "An engaging 5-question personality engine designed entirely with generative AI tools. Tailored for a local Agartala juice bar to naturally align fitness routines with custom organic beverages.",
+      description: "A five question personality quiz I designed and built with generative AI. I made it for a local juice bar in Agartala so their customers could match a fitness vibe to a custom organic drink.",
       stack: ["React", "Tailwind CSS", "Generative AI", "Vite"],
     },
     {
-      title: "Hornbill Restaurant — Brand Identity",
-      subtitle: "Social Grid & Visual Branding System",
+      title: "Hornbill Restaurant, Brand Identity",
+      subtitle: "A full visual system for a restaurant's socials",
       imageUrl: "/images/hornbill.png",
       placeholder: "H*",
       url: "https://www.instagram.com/hornbill223",
       buttonText: "View Grid Aesthetics",
       ctaText: "Open Instagram Grid",
-      description: "Crafted the comprehensive brand identity and social media layout system for Agartala's popular restaurant. Designed premium visual layouts, culinary assets, and promotional templates to build a unified aesthetic.",
+      description: "I built the brand identity and social grid for one of Agartala's busiest restaurants. The visual layouts, the food photography, and a set of promo templates that all feel like they belong to the same place.",
       stack: ["Brand Design", "Social Strategy", "Generative Media", "Figma"],
     }
   ];
@@ -405,10 +405,10 @@ export default function Portfolio() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <p className="text-xs font-mono tracking-widest text-slate-400 uppercase mb-3">
-              // Creative Work &amp; Social Reach
+              // A Few Things I've Made
             </p>
             <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">
-              Creative Showcase
+              Selected Work
             </h2>
           </div>
 

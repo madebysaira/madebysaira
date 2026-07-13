@@ -28,16 +28,16 @@ export default function Velocity() {
           <div className="lg:col-span-8 flex flex-col gap-6">
             <Reveal as="blockquote" className="border-l border-white/30 pl-6 py-2 mb-6">
               <p className="text-xl md:text-3xl font-serif italic text-white/90 leading-snug">
-                "The digital landscape changes every single week, and my greatest skill is speed-of-learning."
+                "The tools change almost every week, so the most useful thing I own is how fast I can learn."
               </p>
             </Reveal>
 
             <Reveal delay={0.1} className="flex flex-col gap-6 text-slate-300 text-sm md:text-base leading-relaxed font-sans font-normal">
               <p>
-                I don’t wait for formal training; I jump straight into the trenches. When I wanted to understand how the web works, I sat down and tried to build an entire website from scratch. 
+                I don't really wait around for a course to give me permission. I just start. When I wanted to understand how websites actually work, I sat down and built one from scratch, mistakes and all.
               </p>
               <p>
-                I adapt fast, I upskill instantly, and I thrive on taking a chaotic creative brief and turning it into a polished, live asset for clients globally.
+                I pick new things up fast, I'm happy being a beginner for a few days, and I genuinely enjoy taking a messy brief and turning it into a finished, living asset for clients anywhere in the world.
               </p>
             </Reveal>
           </div>

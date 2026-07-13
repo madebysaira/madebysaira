@@ -41,7 +41,7 @@ export default function ContactCal() {
             Let's Talk.
           </h2>
           <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed mb-10 font-sans font-normal">
-            Whether you need to set up a cutting-edge AI pipeline, need high-end cinematic visuals, or just want to brainstorm speculative ad concepts—I'm ready to dive in. Select a time slot that works for you, and let's get building. No complex forms required.
+            Maybe you want to set up an AI pipeline, or you need cinematic visuals that feel genuinely expensive, or you just want to throw a few ad ideas around and see what sticks. Any of those work for me. Pick a time that suits you and we will take it from there. No long forms, no endless back and forth.
           </p>
 
           <button 
@@ -51,7 +51,7 @@ export default function ContactCal() {
             className="group px-8 py-4 sharp-button font-mono text-sm tracking-wider uppercase flex items-center gap-3 cursor-pointer bg-cosmic-navy text-white border-white/20 hover:border-white hover:bg-white hover:text-black transition-all duration-300 focus:outline-none"
           >
             <Calendar size={18} className="group-hover:animate-bounce" />
-            Book a 15-Min Session
+            Book a 15 Minute Call
           </button>
         </Reveal>
       </div>

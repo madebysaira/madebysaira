@@ -28,10 +28,10 @@ export default function About() {
           <div className="lg:col-span-8 flex flex-col gap-8 text-slate-300 text-sm md:text-base leading-relaxed">
             <Reveal className="flex flex-col gap-6">
               <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-normal">
-                Hey there! I’m Sagarika, a 24-year-old freelance AI Video & Image Creator, Visual Designer, and Workflow Consultant based in Tripura, India. Armed with a B.A. Honours background, I operate globally as a one-woman digital production engine executing the entire creative pipeline myself—from high-fashion commercial ad concepts and logos to setting up internal AI content training frameworks for companies.
+                Hi, I'm Sagarika. I'm 24, I live in Tripura, India, and I work with brands all over the world as a freelance AI video and image creator, visual designer, and workflow consultant. My degree is a B.A. Honours in Philosophy, which sounds unrelated until you watch me take a messy brief apart and rebuild it into something that actually ships. I run the whole creative pipeline on my own, from the first commercial concept and logo to the AI content systems I set up inside companies.
               </p>
               <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-normal">
-                If you need a hyper-realistic short film scene, a striking brand design asset, or a strategic partner to train your team on mastering AI content workflows (leveraging tools like Claude to direct and structure assets)—I don't just prompt it. I build it, teach it, and deploy it.
+                So if you need a lifelike short film scene, a brand asset that stops the scroll, or someone who can get your team genuinely comfortable with AI workflows, that is my everyday work. I take the whole thing from a rough idea to something real. I design it, build it, teach it, and make sure it still holds up once it is live.
               </p>
             </Reveal>
 
