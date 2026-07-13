@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <title>404 — Signal Lost | Sagarika Sultana</title>
+    <meta name="description" content="This scene didn't render. The page you're looking for has wandered off the storyboard. Head back to Sagarika Sultana's portfolio." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href="https://madebysaira.me" />
+    <meta name="theme-color" content="#010103" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --void: #010103;
+        --navy: #060612;
+        --blue: #0b0f24;
+        --border: rgba(255, 255, 255, 0.1);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--void);
+        background-image: radial-gradient(circle at 50% 40%, var(--blue) 0%, var(--navy) 45%, var(--void) 100%);
+        color: #e2e8f0;
+        font-family: 'Poppins', system-ui, sans-serif;
+        overflow: hidden;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Animated aurora glow blobs */
+      .aurora {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        filter: blur(90px);
+        opacity: 0.5;
+      }
+      .aurora span {
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        mix-blend-mode: screen;
+      }
+      .aurora .a1 { width: 46vw; height: 46vw; left: -8vw; top: -10vw; background: #1e3a8a; animation: drift1 16s ease-in-out infinite; }
+      .aurora .a2 { width: 40vw; height: 40vw; right: -6vw; top: 10vh; background: #3b82f6; animation: drift2 20s ease-in-out infinite; }
+      .aurora .a3 { width: 34vw; height: 34vw; left: 25vw; bottom: -12vw; background: #0b0f24; animation: drift3 24s ease-in-out infinite; }
+      @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(6vw,4vh) scale(1.15); } }
+      @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-5vw,5vh) scale(1.1); } }
+      @keyframes drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(4vw,-4vh) scale(1.2); } }
+
+      /* Fine dotted grid overlay to match the portfolio texture */
+      .grid-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 24px 24px;
+        opacity: 0.5;
+        mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 75%);
+        -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 75%);
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 640px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .brand {
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 0.4rem 0.85rem;
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+        font-weight: 700;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-bottom: 2.5rem;
+      }
+      .brand:hover { background: #fff; color: #000; }
+
+      /* Glitchy 404 */
+      .code {
+        position: relative;
+        font-weight: 900;
+        line-height: 0.9;
+        font-size: clamp(6rem, 30vw, 16rem);
+        letter-spacing: -0.03em;
+        color: #fff;
+        user-select: none;
+      }
+      .code::before,
+      .code::after {
+        content: '404';
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .code::before { color: #3b82f6; animation: glitch 3.4s infinite steps(2, end); }
+      .code::after  { color: #f0457a; animation: glitch 2.6s infinite reverse steps(2, end); }
+      @keyframes glitch {
+        0%, 92%, 100% { transform: translate(0, 0); opacity: 0; }
+        93% { transform: translate(-3px, 1px); opacity: 0.7; }
+        95% { transform: translate(3px, -1px); opacity: 0.5; }
+        97% { transform: translate(-2px, -1px); opacity: 0.6; }
+        99% { transform: translate(2px, 1px); opacity: 0.4; }
+      }
+
+      .tag {
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: #64748b;
+        margin-top: 1.25rem;
+      }
+      .tag .blink { animation: blink 1.1s steps(2, start) infinite; }
+      @keyframes blink { to { opacity: 0; } }
+
+      h1 {
+        margin-top: 1.5rem;
+        font-family: 'Instrument Serif', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        color: #f8fafc;
+        line-height: 1.15;
+      }
+      p.lead {
+        margin: 1rem auto 0;
+        max-width: 34rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #94a3b8;
+      }
+
+      .actions {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+      .btn {
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.9rem 1.6rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+        background: rgba(6, 6, 18, 0.6);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn:hover { border-color: #fff; background: #fff; color: #000; }
+      .btn.ghost { background: transparent; }
+
+      /* Entrance animation */
+      .wrap > * { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .wrap > *:nth-child(1) { animation-delay: 0.05s; }
+      .wrap > *:nth-child(2) { animation-delay: 0.12s; }
+      .wrap > *:nth-child(3) { animation-delay: 0.2s; }
+      .wrap > *:nth-child(4) { animation-delay: 0.28s; }
+      .wrap > *:nth-child(5) { animation-delay: 0.36s; }
+      .wrap > *:nth-child(6) { animation-delay: 0.44s; }
+      @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, .code::before, .code::after { animation: none !important; }
+        .code::before, .code::after { opacity: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <main class="wrap">
+      <a class="brand" href="/">SAIRA</a>
+      <div class="code" data-text="404" aria-hidden="true">404</div>
+      <p class="tag">// Signal Lost<span class="blink">_</span></p>
+      <h1>This scene didn't render.</h1>
+      <p class="lead">
+        The page you're looking for has wandered off the storyboard — maybe it was
+        never shot, or the link got cut in the edit. Let's get you back to the reel.
+      </p>
+      <div class="actions">
+        <a class="btn" href="/">◂ Back to Home</a>
+        <a class="btn ghost" href="/#booking">Book a Call</a>
+      </div>
+    </main>
+  </body>
+</html>

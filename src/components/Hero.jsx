@@ -24,7 +24,7 @@ export default function Hero({ setView }) {
     <section 
       id="hero"
       ref={containerRef}
-      className="relative min-h-[90svh] flex flex-col justify-center items-start px-6 md:px-16 lg:pl-32 xl:pl-40 pt-16 sm:pt-24 pb-24 sm:pb-12 lg:pb-0 overflow-hidden bg-cosmic-void"
+      className="relative min-h-[90svh] flex flex-col justify-center items-start px-6 md:px-16 lg:pl-32 xl:pl-40 pt-16 sm:pt-24 pb-24 sm:pb-20 lg:pb-24 overflow-hidden bg-cosmic-void"
     >
       {/* Animated Aurora Background */}
       <div className="absolute inset-0 pointer-events-none opacity-40 z-0">

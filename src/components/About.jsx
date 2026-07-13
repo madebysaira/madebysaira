@@ -1,3 +1,5 @@
+import Reveal from './ui/Reveal';
+
 export default function About() {
   return (
     <section 
@@ -24,17 +26,17 @@ export default function About() {
  
           {/* Right Block: Content & Metrics */}
           <div className="lg:col-span-8 flex flex-col gap-8 text-slate-300 text-sm md:text-base leading-relaxed">
-            <div className="flex flex-col gap-6">
+            <Reveal className="flex flex-col gap-6">
               <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-normal">
                 Hey there! I’m Sagarika, a 24-year-old freelance AI Video & Image Creator, Visual Designer, and Workflow Consultant based in Tripura, India. Armed with a B.A. Honours background, I operate globally as a one-woman digital production engine executing the entire creative pipeline myself—from high-fashion commercial ad concepts and logos to setting up internal AI content training frameworks for companies.
               </p>
               <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-normal">
                 If you need a hyper-realistic short film scene, a striking brand design asset, or a strategic partner to train your team on mastering AI content workflows (leveraging tools like Claude to direct and structure assets)—I don't just prompt it. I build it, teach it, and deploy it.
               </p>
-            </div>
- 
+            </Reveal>
+
             {/* Quick Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-cosmic-border mt-4">
+            <Reveal delay={0.1} className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-cosmic-border mt-4">
               <div>
                 <p className="text-xs font-mono text-slate-500 uppercase">// Location</p>
                 <p className="text-white font-bold mt-1 text-sm md:text-base">Tripura, India</p>
@@ -47,7 +49,7 @@ export default function About() {
                 <p className="text-xs font-mono text-slate-500 uppercase">// Stack Focus</p>
                 <p className="text-white font-bold mt-1 text-sm md:text-base">Generative Media</p>
               </div>
-            </div>
+            </Reveal>
           </div>
  
         </div>

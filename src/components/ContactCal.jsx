@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { getCalApi } from '@calcom/embed-react';
 import { Calendar } from 'lucide-react';
+import Reveal from './ui/Reveal';
 
 export default function ContactCal() {
 
@@ -32,7 +33,7 @@ export default function ContactCal() {
       <h2 className="sr-only">Scheduling Console</h2>
       
       <div className="max-w-4xl">
-        <div className="mb-10 text-left">
+        <Reveal className="mb-10 text-left">
           <p className="text-xs font-mono tracking-widest text-slate-400 uppercase mb-3">
             // Ready to Collaborate?
           </p>
@@ -52,7 +53,7 @@ export default function ContactCal() {
             <Calendar size={18} className="group-hover:animate-bounce" />
             Book a 15-Min Session
           </button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

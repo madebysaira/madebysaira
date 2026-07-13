@@ -60,6 +60,16 @@ html, body {
   border: 1px solid var(--color-cosmic-border);
 }
 
+/* Hide scrollbar on horizontally scrollable strips (e.g. mobile tab switcher)
+   while keeping the element fully swipe/scroll-able. */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .sharp-button {
   border-radius: 0px;
   border: 1px solid rgba(255, 255, 255, 0.3);

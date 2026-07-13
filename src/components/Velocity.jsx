@@ -1,3 +1,5 @@
+import Reveal from './ui/Reveal';
+
 export default function Velocity() {
   return (
     <section 
@@ -24,20 +26,20 @@ export default function Velocity() {
 
           {/* Right Block: Manifesto Quote & Description */}
           <div className="lg:col-span-8 flex flex-col gap-6">
-            <blockquote className="border-l border-white/30 pl-6 py-2 mb-6">
+            <Reveal as="blockquote" className="border-l border-white/30 pl-6 py-2 mb-6">
               <p className="text-xl md:text-3xl font-serif italic text-white/90 leading-snug">
                 "The digital landscape changes every single week, and my greatest skill is speed-of-learning."
               </p>
-            </blockquote>
+            </Reveal>
 
-            <div className="flex flex-col gap-6 text-slate-300 text-sm md:text-base leading-relaxed font-sans font-normal">
+            <Reveal delay={0.1} className="flex flex-col gap-6 text-slate-300 text-sm md:text-base leading-relaxed font-sans font-normal">
               <p>
                 I don’t wait for formal training; I jump straight into the trenches. When I wanted to understand how the web works, I sat down and tried to build an entire website from scratch. 
               </p>
               <p>
                 I adapt fast, I upskill instantly, and I thrive on taking a chaotic creative brief and turning it into a polished, live asset for clients globally.
               </p>
-            </div>
+            </Reveal>
           </div>
 
         </div>

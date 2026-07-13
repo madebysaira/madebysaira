@@ -1,0 +1,17 @@
+{
+  "name": "Sagarika Sultana — AI Video Creator & Visual Designer",
+  "short_name": "Saira",
+  "description": "Freelance AI Video & Image Creator, Visual Designer, and Workflow Consultant based in Tripura, India, operating globally.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#010103",
+  "theme_color": "#010103",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { ArrowUpRight, Cpu, Layers, MessageSquare, Send } from 'lucide-react';
+import Reveal from './ui/Reveal';
 
 const getToolIcon = (name) => {
   const cleanName = name.toLowerCase();
@@ -316,7 +317,7 @@ export default function Services() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="h-full">
+            <Reveal className="h-full">
               <a href="https://www.houseofshafaq.com/" target="_blank" rel="noopener noreferrer" className="block p-6 sharp-border bg-cosmic-navy/40 hover:bg-cosmic-navy/80 hover:border-white/30 transition-all duration-300 h-full relative z-10">
                 <div className="h-10 mb-4 flex items-center">
                   <img src="https://framerusercontent.com/images/GLlzFcsDUzJfJaTbESMuOvceUPY.svg?width=375&height=375" alt="House of Shafaq" className="h-full w-auto max-w-[150px] object-contain" />
@@ -327,9 +328,9 @@ export default function Services() {
                   Delivered premium visual assets and generative creative direction.
                 </p>
               </a>
-            </div>
+            </Reveal>
 
-            <div className="h-full">
+            <Reveal delay={0.1} className="h-full">
               <a href="https://lab.glitchberry.co/" target="_blank" rel="noopener noreferrer" className="block p-6 sharp-border bg-cosmic-navy/40 hover:bg-cosmic-navy/80 hover:border-white/30 transition-all duration-300 h-full relative z-10">
                 <div className="h-10 mb-4 flex items-center">
                   <span className="text-2xl font-black tracking-tighter text-white opacity-80 uppercase">Glitchberry</span>
@@ -340,9 +341,9 @@ export default function Services() {
                   Collaborated on cutting-edge digital aesthetics and dynamic visual storytelling for modern web experiences.
                 </p>
               </a>
-            </div>
+            </Reveal>
 
-            <div className="h-full">
+            <Reveal delay={0.2} className="h-full">
               <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" className="block p-6 sharp-border bg-cosmic-navy/40 hover:bg-cosmic-navy/80 hover:border-white/30 transition-all duration-300 h-full relative z-10">
                 <div className="h-10 mb-4 flex items-center">
                   <img src="https://www.fiverr.com/favicon.ico" alt="Fiverr" className="h-full w-auto max-w-[150px] object-contain" />
@@ -353,7 +354,7 @@ export default function Services() {
                   Top-rated freelance work handling bespoke designs and AI video campaigns.
                 </p>
               </a>
-            </div>
+            </Reveal>
           </div>
         </div>
 
@@ -370,12 +371,12 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {experiments.map((exp, index) => (
-              <a 
-                href={exp.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                key={index}
-                className="block p-8 sharp-border bg-cosmic-navy/40 hover:bg-cosmic-navy/80 hover:border-white/30 transition-all duration-300 group"
+              <Reveal key={index} delay={index * 0.1} className="h-full">
+              <a
+                href={exp.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full p-8 sharp-border bg-cosmic-navy/40 hover:bg-cosmic-navy/80 hover:border-white/30 transition-all duration-300 group"
               >
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center gap-3">
@@ -396,6 +397,7 @@ export default function Services() {
                   {exp.description}
                 </p>
               </a>
+              </Reveal>
             ))}
           </div>
         </div>

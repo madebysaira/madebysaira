@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import { Globe } from 'lucide-react';
+import SpotlightCard from './ui/SpotlightCard';
+import Reveal from './ui/Reveal';
 
 /* ─── Icons ─── */
 const InstagramIcon = ({ size = 18 }) => (
@@ -77,7 +79,7 @@ function VideoCard({ post }) {
   };
 
   return (
-    <div className="w-full h-full flex flex-col group p-4 bg-cosmic-navy/30 border border-white/10 hover:border-white/25 transition-all duration-300">
+    <SpotlightCard className="w-full h-full flex flex-col group p-4 bg-cosmic-navy/30 border border-white/10 hover:border-white/25 transition-all duration-300" spotlightColor="rgba(120, 160, 255, 0.18)">
       {/* Header */}
       <div className="mb-3">
         <h3 className="text-sm font-bold text-white tracking-tight mb-1">
@@ -103,6 +105,7 @@ function VideoCard({ post }) {
         <video
           ref={videoRef}
           src={post.videoUrl}
+          poster={post.poster}
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleEnded}
           playsInline
@@ -158,7 +161,7 @@ function VideoCard({ post }) {
       >
         View on LinkedIn <LinkedinIcon size={10} />
       </a>
-    </div>
+    </SpotlightCard>
   );
 }
 
@@ -169,7 +172,7 @@ function InstagramCard({ reel }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="w-full h-full flex flex-col group p-4 bg-cosmic-navy/30 border border-white/10 hover:border-white/25 transition-all duration-300">
+    <SpotlightCard className="w-full h-full flex flex-col group p-4 bg-cosmic-navy/30 border border-white/10 hover:border-white/25 transition-all duration-300" spotlightColor="rgba(120, 160, 255, 0.18)">
       {/* Header */}
       <div className="mb-3 text-center">
         <h3 className="text-sm font-bold text-white tracking-tight mb-1">
@@ -235,7 +238,7 @@ function InstagramCard({ reel }) {
       >
         Watch on Instagram <InstagramIcon size={10} />
       </a>
-    </div>
+    </SpotlightCard>
   );
 }
 
@@ -244,7 +247,7 @@ function InstagramCard({ reel }) {
    ════════════════════════════════════════════ */
 function WebAppCard({ app }) {
   return (
-    <div className="w-full h-full flex flex-col group p-4 bg-cosmic-navy/30 border border-white/10 hover:border-white/25 transition-all duration-300">
+    <SpotlightCard className="w-full h-full flex flex-col group p-4 bg-cosmic-navy/30 border border-white/10 hover:border-white/25 transition-all duration-300" spotlightColor="rgba(120, 160, 255, 0.18)">
         {/* Header */}
         <div className="mb-3">
           <h3 className="text-sm font-bold text-white tracking-tight mb-1">
@@ -304,7 +307,7 @@ function WebAppCard({ app }) {
         >
           {app.ctaText || (app.url === '#' ? 'Internal App' : 'Open Web App')} &nbsp;<Globe size={10} />
         </a>
-    </div>
+    </SpotlightCard>
   );
 }
 
@@ -322,6 +325,7 @@ export default function Portfolio() {
       title: "Tanishq Jewellery Spec Campaign",
       subtitle: "Cinematic Jewelry / Spec Ad Campaign",
       videoUrl: "/videos/tanishq.mp4",
+      poster: "/images/posters/tanishq.jpg",
       url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_tanishq-aiadvertising-aivideo-activity-7465417409286344704-v9JY",
       width: 720,
       height: 1280,
@@ -330,6 +334,7 @@ export default function Portfolio() {
       title: "Horlicks Pro Fitness Spec Campaign",
       subtitle: "Fitness Storytelling / Spec Ad Concept",
       videoUrl: "/videos/horlicks.mp4",
+      poster: "/images/posters/horlicks.jpg",
       url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_specad-aiadvertising-creativedirection-activity-7465438959947632642-DOwl",
       width: 720,
       height: 1280,
@@ -338,6 +343,7 @@ export default function Portfolio() {
       title: "Campa Cola Spec Campaign",
       subtitle: "8-Second Retro-Modern Ad Concept",
       videoUrl: "/videos/campacola.mp4",
+      poster: "/images/posters/campacola.jpg",
       url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_campacola-aiadvertising-aivideo-activity-7465407257623666688-VfiS",
       width: 720,
       height: 1280,
@@ -407,10 +413,10 @@ export default function Portfolio() {
           </div>
 
           {/* Tab Switcher */}
-          <div className="flex gap-2 border border-white/10 p-1 bg-cosmic-navy/60 sharp-border select-none">
+          <div className="flex gap-2 border border-white/10 p-1 bg-cosmic-navy/60 sharp-border select-none w-full md:w-auto overflow-x-auto no-scrollbar">
             <button
               onClick={() => setActiveTab('campaigns')}
-              className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all duration-200 cursor-pointer ${
+              className={`shrink-0 whitespace-nowrap px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-mono tracking-widest uppercase transition-all duration-200 cursor-pointer ${
                 activeTab === 'campaigns'
                   ? 'bg-white text-black font-bold'
                   : 'text-slate-400 hover:text-white bg-transparent'
@@ -420,7 +426,7 @@ export default function Portfolio() {
             </button>
             <button
               onClick={() => setActiveTab('reels')}
-              className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all duration-200 cursor-pointer ${
+              className={`shrink-0 whitespace-nowrap px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-mono tracking-widest uppercase transition-all duration-200 cursor-pointer ${
                 activeTab === 'reels'
                   ? 'bg-white text-black font-bold'
                   : 'text-slate-400 hover:text-white bg-transparent'
@@ -430,7 +436,7 @@ export default function Portfolio() {
             </button>
             <button
               onClick={() => setActiveTab('apps')}
-              className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all duration-200 cursor-pointer ${
+              className={`shrink-0 whitespace-nowrap px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-mono tracking-widest uppercase transition-all duration-200 cursor-pointer ${
                 activeTab === 'apps'
                   ? 'bg-white text-black font-bold'
                   : 'text-slate-400 hover:text-white bg-transparent'
@@ -447,7 +453,9 @@ export default function Portfolio() {
         {activeTab === 'campaigns' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {linkedinPosts.map((post, idx) => (
-              <VideoCard key={idx} post={post} />
+              <Reveal key={idx} delay={idx * 0.08} className="h-full">
+                <VideoCard post={post} />
+              </Reveal>
             ))}
           </div>
         )}
@@ -456,7 +464,9 @@ export default function Portfolio() {
         {activeTab === 'reels' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {instagramReels.map((reel, idx) => (
-              <InstagramCard key={idx} reel={reel} />
+              <Reveal key={idx} delay={idx * 0.08} className="h-full">
+                <InstagramCard reel={reel} />
+              </Reveal>
             ))}
           </div>
         )}
@@ -465,7 +475,9 @@ export default function Portfolio() {
         {activeTab === 'apps' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {aiWebApps.map((app, idx) => (
-              <WebAppCard key={idx} app={app} />
+              <Reveal key={idx} delay={idx * 0.08} className="h-full">
+                <WebAppCard app={app} />
+              </Reveal>
             ))}
           </div>
         )}
