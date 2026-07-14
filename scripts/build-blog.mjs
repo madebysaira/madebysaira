@@ -179,7 +179,7 @@ function head({ title, description, url, image, type = 'article', published, mod
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Serif:ital@0;1&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="${type}" />
@@ -208,17 +208,22 @@ function head({ title, description, url, image, type = 'article', published, mod
     <link rel="stylesheet" href="/blog/blog.css" />
   </head>
   <body>
+    <header class="site-header">
+      <a href="/" class="header-logo">Sagarika Sultana</a>
+      <nav class="header-links">
+        <a href="/blog/">Journal</a>
+        <a href="/#booking">Contact</a>
+      </nav>
+    </header>
 `;
 }
 
 const foot = () => `
     <footer class="site-foot">
-      <span>&copy; ${new Date().getFullYear()} ${esc(SITE.name)}</span>
-      <span>
+      <span class="foot-credit">Sagarika Sultana</span>
+      <span class="foot-links">
         <a href="/">Home</a>
-        &nbsp;&middot;&nbsp;
         <a href="${esc(SITE.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>
-        &nbsp;&middot;&nbsp;
         <a href="https://x.com/madebysaira" target="_blank" rel="noopener noreferrer">X</a>
       </span>
     </footer>
@@ -372,7 +377,6 @@ function renderIndex(posts) {
       <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 
       <header class="index-head">
-        <a class="back-home" href="/">&#8592; Back home</a>
         <h1>Journal</h1>
         <p class="index-sub">Notes on AI video, visual design and whatever else I am building. Most of it starts as a project on <a href="${esc(SITE.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
       </header>
