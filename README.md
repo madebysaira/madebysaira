@@ -63,6 +63,18 @@ Whether you need an ad campaign that stops the scroll, a fresh brand identity, o
 🌐 **Portfolio:** [madebysaira.me](https://www.madebysaira.me)
 📅 **Book a quick call:** available through my [website](https://www.madebysaira.me)
 
+
+---
+
+## Tools I Share
+
+I open-source my production workflows and prompt libraries to help fellow creators:
+
+- **[cinematic-ai-prompts](https://github.com/madebysaira/cinematic-ai-prompts)** — Curated prompt library for commercial AI video (Kling, Veo, Runway, Luma)
+- **[n8n-ai-creator-pipelines](https://github.com/madebysaira/n8n-ai-creator-pipelines)** — Production-ready n8n workflows for AI studios (brief intake, batch generation, client review, delivery)
+
+New repos weekly. Star them if you find them useful!
+
 <div align="center">
 
 *Based in Tripura, India · Available for freelance projects worldwide*
