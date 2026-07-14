@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "blog": "node scripts/build-blog.mjs",
+    "prebuild": "node scripts/build-blog.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -13,8 +15,10 @@
     "@calcom/embed-react": "^1.5.3",
     "@tailwindcss/vite": "^4.3.1",
     "framer-motion": "^12.40.0",
+    "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
     "lucide-react": "^1.21.0",
+    "marked": "^18.0.6",
     "motion": "^12.40.0",
     "ogl": "^1.0.11",
     "react": "^19.2.6",

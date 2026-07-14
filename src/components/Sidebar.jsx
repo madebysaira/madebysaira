@@ -106,8 +106,8 @@ export default function Sidebar({ view = 'portfolio', setView }) {
           >
             EXPERTISE
           </button>
-          <button 
-            onClick={() => scrollToSection('about')} 
+          <button
+            onClick={() => scrollToSection('about')}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') scrollToSection('about');
             }}
@@ -115,6 +115,12 @@ export default function Sidebar({ view = 'portfolio', setView }) {
           >
             ABOUT
           </button>
+          <a
+            href="/blog/"
+            className="[writing-mode:vertical-lr] rotate-180 hover:text-white transition-colors duration-200 cursor-pointer focus:outline-none"
+          >
+            JOURNAL
+          </a>
         </nav>
 
         {/* Social Links */}
@@ -143,16 +149,24 @@ export default function Sidebar({ view = 'portfolio', setView }) {
           SAIRA
         </button>
         
-        {/* Contact CTA */}
-        <button 
-          onClick={() => scrollToSection('booking')}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') scrollToSection('booking');
-          }}
-          className="text-xs px-3 py-1.5 border border-white/20 bg-white/5 text-white hover:bg-white hover:text-black font-mono transition-all duration-300 flex items-center gap-1 focus:outline-none"
-        >
-          BOOK A CALL <ArrowUpRight size={12} />
-        </button>
+        {/* Right-side nav: Journal + Contact CTA */}
+        <div className="flex items-center gap-3">
+          <a
+            href="/blog/"
+            className="text-xs font-mono tracking-widest text-slate-300 hover:text-white transition-colors duration-200 uppercase"
+          >
+            Journal
+          </a>
+          <button
+            onClick={() => scrollToSection('booking')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') scrollToSection('booking');
+            }}
+            className="text-xs px-3 py-1.5 border border-white/20 bg-white/5 text-white hover:bg-white hover:text-black font-mono transition-all duration-300 flex items-center gap-1 focus:outline-none"
+          >
+            BOOK A CALL <ArrowUpRight size={12} />
+          </button>
+        </div>
       </header>
     </>
   );

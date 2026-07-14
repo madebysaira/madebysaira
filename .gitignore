@@ -35,3 +35,11 @@ scratch_generate_og.py
 check-errors.mjs
 opengraph.png
 full-audit.json
+
+# Generated blog output — rebuilt from content/blog/*.md on every deploy by
+# scripts/build-blog.mjs. Source of truth is the Markdown, not this HTML.
+# (blog.css is hand-written and IS tracked.)
+public/blog/index.html
+public/blog/rss.xml
+public/blog/*/
+public/sitemap.xml
