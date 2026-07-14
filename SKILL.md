@@ -26,6 +26,12 @@ turns your Markdown into a full HTML page with all the SEO tags, updates the blo
 index, the sitemap, and the RSS feed. **You do not generate HTML. You do not edit
 the sitemap. You write Markdown and the site does the rest.**
 
+The blog is deliberately minimal and text first. The index page (`/blog/`) lists
+posts as just a **date and a title**, nothing else. There are no thumbnails, no
+descriptions, and no images on that list. Images only ever appear **inside** a post,
+placed by you in the Markdown body. Keep this in mind: the title is what sells the
+post on the index, so make it good.
+
 When your file lands on the `main` branch, the site rebuilds and the post is live
 within a couple of minutes. That is the whole publish flow: commit the Markdown to
 `main`.
@@ -59,8 +65,8 @@ The body starts here.
 | `date` | Yes | `YYYY-MM-DD`. The publish date. Used for ordering and for the article date. |
 | `category` | Recommended | One short label. Use an existing one when it fits: `Case Study`, `Build Log`, `Tutorial`, `Journal`. |
 | `tags` | Recommended | 2 to 5 tags. Include the repo/product name and the main tech or theme. These become keywords. |
-| `cover` | Recommended | Path to a 1200x630 image under `/images/blog/`. If you have no image, omit it and the site uses the default cover. |
-| `coverAlt` | With cover | Plain language description of the image. |
+| `cover` | Optional | Social-share image only. Path to a 1200x630 image under `/images/blog/`. It is used for the link preview when the post is shared (LinkedIn, X, WhatsApp). It is **never shown on the page itself**. If you omit it, the site uses the default brand cover, which is fine for most posts. |
+| `coverAlt` | With cover | Plain language description of the share image. |
 | `repo` | Recommended | Full GitHub URL. Renders a "View the code on GitHub" link. |
 | `updated` | Optional | `YYYY-MM-DD`. Set only when meaningfully revising an old post. |
 | `slug` | Optional | Override the URL slug. By default the slug comes from the filename. |
@@ -169,14 +175,27 @@ Do not keyword stuff. One clear topic per post, written well, beats repetition.
 
 ## 7. Images
 
-If you create a cover image, put it at `public/images/blog/<slug>.png` and reference it
-as `cover: "/images/blog/<slug>.png"` (note: the path in frontmatter drops the
-`public` prefix). Size it 1200x630 for clean social sharing. If you have no image,
-omit the `cover` field entirely and the site falls back to the default brand cover.
-Never point `cover` at an image that does not exist.
+There are two separate things called "image" here. Do not confuse them.
 
-For images inside the body, use standard Markdown and always write alt text:
-`![what the image shows](/images/blog/some-figure.png)`.
+**The cover (social share only).** The `cover` field sets the little preview picture
+that shows when the post link is shared on LinkedIn, X, or WhatsApp. It is **never
+displayed on the page**. Most posts do not need a custom one. If you leave `cover`
+out, the site uses the default brand image, which is fine. If you do want a custom
+share image, put it at `public/images/blog/<slug>.png`, reference it as
+`cover: "/images/blog/<slug>.png"` (the path drops the `public` prefix), and size it
+1200x630. Never point `cover` at a file that does not exist.
+
+**Images inside the post (the only ones readers see).** If a screenshot or diagram
+genuinely helps the story, place it in the Markdown body with standard syntax and
+always write alt text:
+
+```markdown
+![what the image shows](/images/blog/some-figure.png)
+```
+
+Put the file at `public/images/blog/<name>.png`. Only add images that add something.
+The blog is text first by design, so a good post with no images is completely normal
+and often better. Never add an image just to fill space.
 
 ---
 

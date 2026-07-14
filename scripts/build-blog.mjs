@@ -37,6 +37,7 @@ const SITE = {
   authorTwitter: '@madebysaira',
   defaultCover: '/og-cover.png',
   email: 'madebysaira@proton.me',
+  github: 'https://github.com/madebysaira',
 };
 
 /* ── Small helpers ────────────────────────────────────────────────────────── */
@@ -207,24 +208,19 @@ function head({ title, description, url, image, type = 'article', published, mod
     <link rel="stylesheet" href="/blog/blog.css" />
   </head>
   <body>
-    <div class="bg-aurora" aria-hidden="true"><span></span><span></span><span></span></div>
-    <div class="bg-grid" aria-hidden="true"></div>
-
-    <header class="site-nav">
-      <a class="brand" href="/">SAIRA</a>
-      <nav>
-        <a href="/blog/">Journal</a>
-        <a href="/#portfolio">Work</a>
-        <a href="/#booking" class="nav-cta">Book a Call</a>
-      </nav>
-    </header>
 `;
 }
 
 const foot = () => `
     <footer class="site-foot">
-      <span>&copy; ${new Date().getFullYear()} ${esc(SITE.name)}. All rights reserved.</span>
-      <a href="/blog/">Back to the journal</a>
+      <span>&copy; ${new Date().getFullYear()} ${esc(SITE.name)}</span>
+      <span>
+        <a href="/">Home</a>
+        &nbsp;&middot;&nbsp;
+        <a href="${esc(SITE.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://x.com/madebysaira" target="_blank" rel="noopener noreferrer">X</a>
+      </span>
     </footer>
   </body>
 </html>
@@ -291,13 +287,11 @@ function renderPost(post, prevNext) {
     <main class="post">
       <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 
-      <nav class="crumbs"><a href="/">Home</a> <span>/</span> <a href="/blog/">Journal</a> <span>/</span> <em>${esc(post.category)}</em></nav>
+      <nav class="crumbs"><a href="/blog/">&#8592; Back to the journal</a></nav>
 
       <article>
         <header class="post-head">
-          <p class="post-kicker">${esc(post.category)}</p>
           <h1>${esc(post.title)}</h1>
-          <p class="post-standfirst">${esc(post.description)}</p>
           <div class="post-meta">
             <span>${esc(SITE.author)}</span>
             <span class="dot">&middot;</span>
@@ -306,10 +300,6 @@ function renderPost(post, prevNext) {
             <span>${post.readingTime} min read</span>
           </div>
         </header>
-
-        <div class="post-cover">
-          <img src="${esc(post.cover)}" alt="${esc(post.coverAlt)}" width="1200" height="630" loading="eager" />
-        </div>
 
         <div class="post-body">
           ${bodyHtml}
@@ -357,18 +347,13 @@ function renderIndex(posts) {
     })),
   };
 
-  const cards = posts
+  const rows = posts
     .map(
-      (p, i) => `
-        <a class="card ${i === 0 ? 'card-feature' : ''}" href="/blog/${p.slug}/">
-          <div class="card-media"><img src="${esc(p.cover)}" alt="${esc(p.coverAlt)}" loading="${i < 3 ? 'eager' : 'lazy'}" /></div>
-          <div class="card-body">
-            <p class="card-kicker">${esc(p.category)}</p>
-            <h2>${esc(p.title)}</h2>
-            <p class="card-desc">${esc(p.description)}</p>
-            <div class="card-meta"><time datetime="${esc(p.date)}">${esc(p.dateDisplay)}</time><span class="dot">&middot;</span><span>${p.readingTime} min read</span></div>
-          </div>
-        </a>`
+      (p) => `
+        <article class="post-row">
+          <p class="post-row-date"><time datetime="${esc(p.date)}">${esc(p.dateDisplay)}</time></p>
+          <h2><a href="/blog/${p.slug}/">${esc(p.title)}</a></h2>
+        </article>`
     )
     .join('\n');
 
@@ -387,13 +372,13 @@ function renderIndex(posts) {
       <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 
       <header class="index-head">
-        <p class="index-kicker">// The Journal</p>
-        <h1>Notes from the studio</h1>
-        <p class="index-sub">Case studies, build logs and honest notes on making things with AI video, design and a bit of automation. New posts land here as I ship new work.</p>
+        <a class="back-home" href="/">&#8592; Back home</a>
+        <h1>Journal</h1>
+        <p class="index-sub">Notes on AI video, visual design and whatever else I am building. Most of it starts as a project on <a href="${esc(SITE.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
       </header>
 
-      <section class="card-grid">
-        ${posts.length ? cards : empty}
+      <section class="post-list">
+        ${posts.length ? rows : empty}
       </section>
     </main>
 ` +
