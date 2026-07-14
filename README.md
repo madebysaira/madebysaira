@@ -80,7 +80,10 @@ New repos weekly. Star them if you find them useful!
 
 Writing about the work as I ship it:
 
+- [How I Built My Portfolio Site, Start to Finish](https://www.madebysaira.me/blog/building-my-portfolio-with-ai/) — July 2026
 - [How I Actually Choose AI Models for Motion Graphics](https://www.madebysaira.me/blog/motion-graphics-comparison/) — July 2026
+- [Curated Prompts for Cinematic AI Video](https://www.madebysaira.me/blog/cinematic-ai-prompts/) — July 2026
+- [n8n Workflows for AI Video Studios](https://www.madebysaira.me/blog/n8n-ai-pipelines/) — July 2026
 
 <div align="center">
 
