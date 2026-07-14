@@ -19,10 +19,12 @@
  * -----------------------------------------------------------------------------
  */
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, existsSync, copyFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
 import matter from 'gray-matter';
+import { generateOgImage } from './og-image.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -39,6 +41,17 @@ const SITE = {
   email: 'madebysaira@proton.me',
   github: 'https://github.com/madebysaira',
 };
+
+// Short content hash of blog.css, appended to its URL so browsers always load
+// the current stylesheet after a change (fixes stale-cache layout issues).
+// Computed once at module load.
+let CSS_VERSION = 'v1';
+try {
+  const cssBytes = readFileSync(join(OUT_DIR, 'blog.css'));
+  CSS_VERSION = createHash('sha256').update(cssBytes).digest('hex').slice(0, 8);
+} catch {
+  // blog.css missing at hash time is fine; falls back to v1.
+}
 
 /* ── Small helpers ────────────────────────────────────────────────────────── */
 
@@ -106,6 +119,12 @@ function loadPosts() {
     const date = fm.date ? new Date(fm.date).toISOString() : new Date(0).toISOString();
     const tags = Array.isArray(fm.tags) ? fm.tags.filter(Boolean) : [];
 
+    // If the author gave a custom cover, use it. Otherwise we auto-generate a
+    // serif title card at build time (see generateOgImage) so every post gets a
+    // distinct, on-brand social share image.
+    const hasCustomCover = Boolean(fm.cover);
+    const cover = hasCustomCover ? String(fm.cover) : `/images/blog/og/${slug}.png`;
+
     posts.push({
       file,
       slug,
@@ -116,7 +135,8 @@ function loadPosts() {
       updated: fm.updated ? new Date(fm.updated).toISOString() : null,
       tags,
       category: fm.category ? String(fm.category) : (tags[0] || 'Journal'),
-      cover: fm.cover ? String(fm.cover) : SITE.defaultCover,
+      hasCustomCover,
+      cover,
       coverAlt: fm.coverAlt ? String(fm.coverAlt) : String(fm.title),
       repo: fm.repo ? String(fm.repo) : '',
       readingTime: readingTime(parsed.content),
@@ -205,7 +225,7 @@ function head({ title, description, url, image, type = 'article', published, mod
     <meta name="twitter:description" content="${esc(description)}" />
     <meta name="twitter:image" content="${esc(img)}" />
 
-    <link rel="stylesheet" href="/blog/blog.css" />
+    <link rel="stylesheet" href="/blog/blog.css?v=${CSS_VERSION}" />
   </head>
   <body>
     <header class="site-header">
@@ -462,6 +482,24 @@ function main() {
     }
   }
   mkdirSync(OUT_DIR, { recursive: true });
+
+  // Auto-generate a serif OG image for every post that has no custom cover.
+  const ogDir = join(PUBLIC_DIR, 'images', 'blog', 'og');
+  mkdirSync(ogDir, { recursive: true });
+  posts.forEach((post) => {
+    if (post.hasCustomCover) return;
+    try {
+      generateOgImage(
+        { title: post.title, dateDisplay: post.dateDisplay, readingTime: post.readingTime },
+        join(ogDir, `${post.slug}.png`)
+      );
+    } catch (err) {
+      // If OG generation fails, fall back to the default brand cover so the
+      // build still succeeds and the post still shares with an image.
+      console.warn(`  ! OG image failed for ${post.slug}: ${err.message}. Using default cover.`);
+      post.cover = SITE.defaultCover;
+    }
+  });
 
   // Per-post pages
   posts.forEach((post, i) => {

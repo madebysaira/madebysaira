@@ -50,13 +50,14 @@ description: "One or two sentences, 120 to 160 characters, that make a person wa
 date: 2026-07-14
 category: "Case Study"
 tags: ["Repo Name", "React", "AI Video"]
-cover: "/images/blog/my-post-cover.png"
-coverAlt: "Plain description of the cover image for screen readers and SEO"
 repo: "https://github.com/madebysaira/the-repo"
 ---
 
-The body starts here.
+The body of the post starts here, in Markdown.
 ```
+
+There is deliberately no `cover` line in that template. Leave it out and the site
+builds the social share image from your title automatically.
 
 | Field | Required | Rules |
 |-------|----------|-------|
@@ -65,8 +66,8 @@ The body starts here.
 | `date` | Yes | `YYYY-MM-DD`. The publish date. Used for ordering and for the article date. |
 | `category` | Recommended | One short label. Use an existing one when it fits: `Case Study`, `Build Log`, `Tutorial`, `Journal`. |
 | `tags` | Recommended | 2 to 5 tags. Include the repo/product name and the main tech or theme. These become keywords. |
-| `cover` | Optional | Social-share image only. Path to a 1200x630 image under `/images/blog/`. It is used for the link preview when the post is shared (LinkedIn, X, WhatsApp). It is **never shown on the page itself**. If you omit it, the site uses the default brand cover, which is fine for most posts. |
-| `coverAlt` | With cover | Plain language description of the share image. |
+| `cover` | Leave blank | **Usually omit this.** When blank, the site auto-generates a social share image from your title (a serif title card on a dark background, matching the journal). Only set it if you want to override that with your own 1200x630 image under `/images/blog/`. Either way the share image is **never shown on the page**, it is only the link preview on LinkedIn, X, WhatsApp. |
+| `coverAlt` | With cover | Plain language description, only needed if you set a custom `cover`. |
 | `repo` | Recommended | Full GitHub URL. Renders a "View the code on GitHub" link. |
 | `updated` | Optional | `YYYY-MM-DD`. Set only when meaningfully revising an old post. |
 | `slug` | Optional | Override the URL slug. By default the slug comes from the filename. |
@@ -199,22 +200,60 @@ and often better. Never add an image just to fill space.
 
 ---
 
-## 8. Publish workflow
+## 8. Publish workflow (where to push and how)
 
-1. Pick the repo to write about. Read its README and code enough to say something true
-   and specific.
-2. Choose a slug. Create `content/blog/<slug>.md`.
-3. Write the frontmatter, then the post, following sections 3 to 6.
+**The repository.** Everything lives in one GitHub repo:
+
+```
+https://github.com/madebysaira/madebysaira   (branch: main)
+```
+
+You have been given push access to it. Publishing means committing your one new
+Markdown file to the **`main`** branch. There is no separate content repo and no CMS.
+Push to `main` and the live site rebuilds itself.
+
+**What happens after you push (you do not do any of this by hand):**
+- A deploy runs `scripts/build-blog.mjs` automatically.
+- It renders your Markdown into a full HTML page with every SEO tag.
+- It **auto-generates the social share image** for the post: a serif title card
+  on a dark background, matching the journal. You do not create or commit any
+  image for this. It happens from your title. (Only set the `cover` field if you
+  deliberately want to override that auto image with your own 1200x630 picture.)
+- It updates the journal index, the sitemap, and the RSS feed.
+- The post goes live at `https://www.madebysaira.me/blog/<slug>/` within a couple
+  of minutes.
+
+**Step by step:**
+
+1. Pick the repo to write about. Read its README and code enough to say something
+   true and specific.
+2. Choose a slug. Create the file `content/blog/<slug>.md`. This is the **only**
+   file you add.
+3. Write the frontmatter, then the post, following sections 3 to 6. In most cases
+   do **not** set `cover`; let the site generate the share image for you.
 4. Run the dash test and the tells check from section 3. Fix anything.
-5. Confirm `cover` (if set) points to a file that exists.
-6. Commit the single new file to the `main` branch with a clear message, for example:
-   `blog: add case study on <repo name>`.
-7. The site rebuilds and deploys automatically. The post appears at
-   `https://www.madebysaira.me/blog/<slug>/` and on the journal index within a couple
-   of minutes.
+5. Commit and push that one file to `main`. From the repo root:
+
+   ```bash
+   git add content/blog/<slug>.md
+   git commit -m "blog: add <short title>"
+   git push origin main
+   ```
+
+   If you added an in-body image (section 7), include it in the same commit:
+   `git add content/blog/<slug>.md public/images/blog/<image>.png`.
+6. Wait a couple of minutes, then confirm the post is live at
+   `https://www.madebysaira.me/blog/<slug>/` and listed on
+   `https://www.madebysaira.me/blog/`.
+
+**Do not** commit anything under `public/blog/` (except the hand-written
+`blog.css`), `public/sitemap.xml`, or `public/images/blog/og/`. Those are generated
+by the build and are gitignored on purpose. If `git status` shows them, do not force
+them in. A clean post is usually a **one-file commit**.
 
 If you want a human to review before it goes live, set `draft: true` in the
-frontmatter and say so. Remove that line to publish.
+frontmatter and push. The post stays off the live site until someone removes that
+line.
 
 ---
 

@@ -43,3 +43,5 @@ public/blog/index.html
 public/blog/rss.xml
 public/blog/*/
 public/sitemap.xml
+# Auto-generated per-post social share images (serif title cards).
+public/images/blog/og/

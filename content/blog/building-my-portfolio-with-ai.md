@@ -4,8 +4,6 @@ description: "The story behind madebysaira.me, from a rough idea to a fast, stat
 date: 2026-07-14
 category: "Case Study"
 tags: ["Portfolio", "React", "Web Design", "AI Workflow"]
-cover: "/og-cover.png"
-coverAlt: "The Sagarika Sultana portfolio cover, with the line I build the future with cinematic AI"
 repo: "https://github.com/madebysaira/madebysaira"
 ---
 
