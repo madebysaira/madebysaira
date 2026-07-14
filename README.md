@@ -76,6 +76,12 @@ I open-source my production workflows and prompt libraries to help fellow creato
 
 New repos weekly. Star them if you find them useful!
 
+## Journal
+
+Writing about the work as I ship it:
+
+- [How I Actually Choose AI Models for Motion Graphics](https://www.madebysaira.me/blog/motion-graphics-comparison/) — July 2026
+
 <div align="center">
 
 *Based in Tripura, India · Available for freelance projects worldwide*
