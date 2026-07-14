@@ -72,6 +72,7 @@ I open-source my production workflows and prompt libraries to help fellow creato
 
 - **[cinematic-ai-prompts](https://github.com/madebysaira/cinematic-ai-prompts)** — Curated prompt library for commercial AI video (Kling, Veo, Runway, Luma)
 - **[n8n-ai-creator-pipelines](https://github.com/madebysaira/n8n-ai-creator-pipelines)** — Production-ready n8n workflows for AI studios (brief intake, batch generation, client review, delivery)
+- **[ai-motion-graphics-comparison](https://github.com/madebysaira/ai-motion-graphics-comparison)** — Model benchmarks for AI motion graphics (Omni Flash vs Remotion vs others). Decision tree, prompt templates, hybrid workflows.
 
 New repos weekly. Star them if you find them useful!
 
