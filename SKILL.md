@@ -87,6 +87,48 @@ This is the most important section. The whole point is that these read like a re
 person wrote them. Match her voice from the main site: plain, warm, confident,
 specific, a little dry. She writes the way she talks.
 
+### Humor: dry, Fireship-adjacent, one notch quieter
+
+Add light humor to every post. The reference point is the Fireship YouTube channel,
+but translated to Sagarika's written voice: deadpan and observational, never wacky.
+Fireship is funny because it tells the truth faster than you expect, not because it
+tells jokes. Steal the mechanics, not the catchphrases.
+
+The mechanics that transfer well to blog prose:
+
+- **Deadpan honesty about pain.** State a ridiculous situation in a flat, calm
+  sentence and let the absurdity do the work. "The video ends with a promise to
+  maybe open source it if enough people beg in the comments. People begged. It is
+  still not open source."
+- **The sudden deflation.** Build something up for a sentence, then undercut it
+  with a short flat one. "The system has two AI graders, a learnings file, and a
+  nine out of ten quality gate. It still puts the logo behind the text roughly never."
+- **Roast the tools you love.** Affectionate jabs at the stack land well because
+  she clearly uses it daily. "Claude Code writes beautiful animation code for
+  videos it has never seen and physically cannot watch. We call this confidence."
+- **Honest numbers as punchlines.** A specific cost, time, or failure count is
+  funnier than any adjective. "Run one took a full day and 400 renders. Run five
+  took ten minutes. The difference was a text file."
+- **One aside per section, maximum.** A short parenthetical works. "(The detector
+  gets confused by motion graphics, which is fair, so does everyone.)"
+
+Rules so it stays her voice and not a Fireship transcript:
+
+- Two or three genuinely funny moments per post beat ten attempts. If a line is
+  not clearly funnier than the plain version, keep the plain version.
+- The joke must carry information. Cut any joke that could be deleted without
+  losing a fact, and never let humor replace the actual explanation.
+- Never punch at people. Tools, hype cycles, and her own mistakes are fair game;
+  other creators and clients are not.
+- No memes, no "bro", no "literally insane", no emoji, no all-caps. The humor is
+  in the sentence rhythm, not the decoration.
+- Do not copy Fireship's actual catchphrases ("but there's a catch", "in 100
+  seconds", "high-level overview"). Same energy, her words.
+- The client-facing final section and the call to action stay warm and straight.
+  Land the jokes in the middle of the post, not at the close.
+- All existing voice rules still apply on top of this, including the dash test
+  and the banned-words list.
+
 **Do:**
 - Write in first person as Sagarika ("I built", "I wanted", "what I learned").
 - Open with a real hook: a problem, a decision, a small story. Never open with
