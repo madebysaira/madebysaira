@@ -70,6 +70,7 @@ Whether you need an ad campaign that stops the scroll, a fresh brand identity, o
 
 I open-source my production workflows and prompt libraries to help fellow creators:
 
+- **[RemotionPlaybook](https://github.com/madebysaira/RemotionPlaybook)** — Recreate any brand video with AI agents (Claude Code + Gemini + Remotion). Scene-split scripts, agent prompts, and the grading rubric, all runnable.
 - **[cinematic-ai-prompts](https://github.com/madebysaira/cinematic-ai-prompts)** — Curated prompt library for commercial AI video (Kling, Veo, Runway, Luma)
 - **[n8n-ai-creator-pipelines](https://github.com/madebysaira/n8n-ai-creator-pipelines)** — Production-ready n8n workflows for AI studios (brief intake, batch generation, client review, delivery)
 - **[ai-motion-graphics-comparison](https://github.com/madebysaira/ai-motion-graphics-comparison)** — Model benchmarks for AI motion graphics (Omni Flash vs Remotion vs others). Decision tree, prompt templates, hybrid workflows.
@@ -81,6 +82,7 @@ New repos weekly. Star them if you find them useful!
 
 Writing about the work as I ship it:
 
+- [I turned a Remotion masterclass into a kit you can run](https://www.madebysaira.me/blog/remotion-playbook/) — July 2026
 - [The Character Kit That Stopped Face Drift in My Client AI Videos](https://www.madebysaira.me/blog/character-kit/) — July 2026
 - [How I Built My Portfolio Site, Start to Finish](https://www.madebysaira.me/blog/building-my-portfolio-with-ai/) — July 2026
 - [How I Actually Choose AI Models for Motion Graphics](https://www.madebysaira.me/blog/motion-graphics-comparison/) — July 2026
