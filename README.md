@@ -70,6 +70,7 @@ Whether you need an ad campaign that stops the scroll, a fresh brand identity, o
 
 I open-source my production workflows and prompt libraries to help fellow creators:
 
+- **[PostProductionForAIVideo](https://github.com/madebysaira/PostProductionForAIVideo)** — Post-production templates and scripts for AI video polish (Remotion, ffmpeg, AE). Client-ready workflows that save hours per video.
 - **[VideoWorkflows](https://github.com/madebysaira/VideoWorkflows)** — Practical n8n pipelines and prompt kits for turning ideas into finished AI video without the manual grind. Full automation from schedule to Drive + Sheets.
 - **[RemotionPlaybook](https://github.com/madebysaira/RemotionPlaybook)** — Recreate any brand video with AI agents (Claude Code + Gemini + Remotion). Scene-split scripts, agent prompts, and the grading rubric, all runnable.
 - **[cinematic-ai-prompts](https://github.com/madebysaira/cinematic-ai-prompts)** — Curated prompt library for commercial AI video (Kling, Veo, Runway, Luma)
@@ -83,6 +84,7 @@ New repos weekly. Star them if you find them useful!
 
 Writing about the work as I ship it:
 
+- [AI Video Is 80% There. Here's the Last 20%](https://www.madebysaira.me/blog/post-production-polish/) — July 2026
 - [Video Workflows That Actually Ship](https://www.madebysaira.me/blog/video-workflows/) — July 2026
 - [I turned a Remotion masterclass into a kit you can run](https://www.madebysaira.me/blog/remotion-playbook/) — July 2026
 - [The Character Kit That Stopped Face Drift in My Client AI Videos](https://www.madebysaira.me/blog/character-kit/) — July 2026
@@ -90,7 +92,6 @@ Writing about the work as I ship it:
 - [How I Actually Choose AI Models for Motion Graphics](https://www.madebysaira.me/blog/motion-graphics-comparison/) — July 2026
 - [Curated Prompts for Cinematic AI Video](https://www.madebysaira.me/blog/cinematic-ai-prompts/) — July 2026
 - [n8n Workflows for AI Video Studios](https://www.madebysaira.me/blog/n8n-ai-pipelines/) — July 2026
-
 <div align="center">
 
 *Based in Tripura, India · Available for freelance projects worldwide*
