@@ -85,6 +85,7 @@ New repos weekly. Star them if you find them useful!
 
 Writing about the work as I ship it:
 
+- [I turned a Claude Co-work tutorial into a complete motion graphics studio](https://www.madebysaira.me/blog/motion-graphics-studio/) — July 2026
 - [AI Video Is 80% There. Here's the Last 20%](https://www.madebysaira.me/blog/post-production-polish/) — July 2026
 - [Video Workflows That Actually Ship](https://www.madebysaira.me/blog/video-workflows/) — July 2026
 - [I turned a Remotion masterclass into a kit you can run](https://www.madebysaira.me/blog/remotion-playbook/) — July 2026
