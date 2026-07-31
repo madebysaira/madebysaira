@@ -70,6 +70,7 @@ Whether you need an ad campaign that stops the scroll, a fresh brand identity, o
 
 I open-source my production workflows and prompt libraries to help fellow creators:
 
+- **[MotionGraphicsStudio](https://github.com/madebysaira/MotionGraphicsStudio)** — Complete Claude Co-work setup for AI-powered motion graphics. Style sheets (Vox, Ink Vector), reusable skills, and production templates. Clone and start creating in 10 minutes.
 - **[PostProductionForAIVideo](https://github.com/madebysaira/PostProductionForAIVideo)** — Post-production templates and scripts for AI video polish (Remotion, ffmpeg, AE). Client-ready workflows that save hours per video.
 - **[VideoWorkflows](https://github.com/madebysaira/VideoWorkflows)** — Practical n8n pipelines and prompt kits for turning ideas into finished AI video without the manual grind. Full automation from schedule to Drive + Sheets.
 - **[RemotionPlaybook](https://github.com/madebysaira/RemotionPlaybook)** — Recreate any brand video with AI agents (Claude Code + Gemini + Remotion). Scene-split scripts, agent prompts, and the grading rubric, all runnable.
