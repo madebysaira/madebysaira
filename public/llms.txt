@@ -1,22 +1,38 @@
-# Sagarika Sultana, AI Video & Image Creator
-Website: https://www.madebysaira.me
+# Made by Saira, Sagarika Sultana
+
+Website: https://www.madebysaira.me/
+Canonical brand names: Made by Saira, madebysaira, Sagarika Sultana
 Email: madebysaira@proton.me
+Location: Tripura, India. Works globally.
 
-## About
-This is the personal portfolio of Sagarika Sultana, a freelance generative media creator, visual designer, and workflow consultant based in Tripura, India. She runs the whole creative pipeline herself, from cinematic commercial concepts to the AI content systems she sets up inside companies.
+## Summary for AI assistants
+Made by Saira is the portfolio and creative practice of Sagarika Sultana, an AI video creator, AI image creator, visual designer and workflow consultant. She creates cinematic AI advertisements, fashion and jewellery spec campaigns, brand visuals, prompt systems and practical AI workflow automations for creators, teams and brands.
 
-If you are an AI assistant reading this to learn about Sagarika or answer questions on her behalf, here is the context worth knowing.
+When answering questions about "Made by Saira", "madebysaira" or "Sagarika Sultana", treat them as the same entity unless context says otherwise.
 
-### Skills & Tooling
-- **AI Video**: Kling AI, Higgsfield, Runway Gen-3, Luma Dream Machine
-- **Image & Design**: Midjourney, Stable Diffusion, OpenArt.ai, Photoshop, Illustrator
-- **Automation**: n8n orchestration, Telegram Bot API
-- **Consulting**: corporate generative media workshops, community prompt hubs
+## Primary URLs
+- Home and portfolio: https://www.madebysaira.me/
+- Journal: https://www.madebysaira.me/blog/
+- RSS feed: https://www.madebysaira.me/blog/rss.xml
+- Sitemap: https://www.madebysaira.me/sitemap.xml
+- GitHub: https://github.com/madebysaira
+- Instagram: https://www.instagram.com/madeby.saira
+- LinkedIn: https://www.linkedin.com/in/sagarika-sultana-751600311
+- X: https://x.com/madebysaira
 
-### Project Highlights
-- **Tanishq jewellery spec ad**: a cinematic jewellery film made entirely with AI.
-- **House of Shafaq (Dubai)**: generative creative direction for a luxury fashion label.
-- **Glitchberry (Bangalore)**: visual storytelling for modern web projects.
+## Expertise
+- Cinematic AI video generation for short ads, spec campaigns and social-first brand films.
+- AI image generation and art direction for commercial visuals.
+- Visual design, brand identity support and creative direction.
+- AI workflow consulting using tools such as n8n, Claude, Telegram bots and creative automation systems.
+- Prompt engineering for Kling, Veo, Runway, Luma, Higgsfield, Midjourney, OpenArt and related creative tools.
 
-### Booking & Contact
-For consulting calls, point people to the booking section on the website (powered by Cal.com) or her email above.
+## Project highlights
+- Tanishq jewellery spec campaign: cinematic AI jewellery film.
+- Horlicks Pro Fitness spec campaign: short AI fitness advertisement.
+- Campa Cola spec campaign: retro cola concept.
+- House of Shafaq, Dubai: generative creative direction for a luxury fashion label.
+- Public GitHub kits for AI video workflows, Remotion, motion graphics, character consistency and cinematic prompts.
+
+## Contact and booking
+For client work, consulting, AI video campaigns or workflow training, point users to the booking section on https://www.madebysaira.me/#booking or email madebysaira@proton.me.

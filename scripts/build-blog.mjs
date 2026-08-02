@@ -34,12 +34,13 @@ const PUBLIC_DIR = join(ROOT, 'public');
 
 const SITE = {
   origin: 'https://www.madebysaira.me',
-  name: 'Sagarika Sultana',
+  name: 'Made by Saira',
   author: 'Sagarika Sultana',
   authorTwitter: '@madebysaira',
   defaultCover: '/og-cover.png',
   email: 'madebysaira@proton.me',
   github: 'https://github.com/madebysaira',
+  personId: 'https://www.madebysaira.me/#person',
 };
 
 // Short content hash of blog.css, appended to its URL so browsers always load
@@ -186,11 +187,12 @@ function head({ title, description, url, image, type = 'article', published, mod
 
     <title>${esc(title)}</title>
     <meta name="description" content="${esc(description)}" />
-    ${tags.length ? `<meta name="keywords" content="${esc(tags.join(', '))}" />` : ''}
+    ${tags.length ? `<meta name="keywords" content="${esc(['Made by Saira', 'madebysaira', 'Sagarika Sultana', ...tags].join(', '))}" />` : `<meta name="keywords" content="Made by Saira, madebysaira, Sagarika Sultana, AI video creator, AI visual designer" />`}
     <meta name="author" content="${esc(SITE.author)}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#010103" />
     <link rel="canonical" href="${esc(url)}" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
@@ -268,8 +270,8 @@ function renderPost(post, prevNext) {
         image: post.cover.startsWith('http') ? post.cover : SITE.origin + post.cover,
         datePublished: post.date,
         dateModified: post.updated || post.date,
-        author: { '@type': 'Person', name: SITE.author, url: SITE.origin },
-        publisher: { '@type': 'Person', name: SITE.author, url: SITE.origin },
+        author: { '@id': SITE.personId },
+        publisher: { '@id': SITE.personId },
         mainEntityOfPage: url,
         keywords: post.tags.join(', '),
         wordCount: stripTags(post.bodyMarkdown).split(/\s+/).filter(Boolean).length,
@@ -441,11 +443,11 @@ ${items}
 }
 
 function writeSitemap(posts) {
-  const staticUrls = [{ loc: `${SITE.origin}/`, priority: '1.0', changefreq: 'monthly' }];
-  const blogUrl = { loc: `${SITE.origin}/blog/`, priority: '0.8', changefreq: 'weekly' };
+  const staticUrls = [{ loc: `${SITE.origin}/`, priority: '1.0', changefreq: 'weekly', lastmod: '2026-08-02' }];
+  const blogUrl = { loc: `${SITE.origin}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: '2026-08-02' };
   const postUrls = posts.map((p) => ({
     loc: `${SITE.origin}/blog/${p.slug}/`,
-    priority: '0.7',
+    priority: '0.8',
     changefreq: 'monthly',
     lastmod: (p.updated || p.date).slice(0, 10),
   }));

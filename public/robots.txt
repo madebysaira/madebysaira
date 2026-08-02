@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-# Welcome AI assistants, extra context lives here
+# AI and search discovery context
 # https://www.madebysaira.me/llms.txt
 
 Sitemap: https://www.madebysaira.me/sitemap.xml
