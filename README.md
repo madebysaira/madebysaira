@@ -70,6 +70,7 @@ Whether you need an ad campaign that stops the scroll, a fresh brand identity, o
 
 I open-source my production workflows and prompt libraries to help fellow creators:
 
+- **[AIVideoDiagrams](https://github.com/madebysaira/AIVideoDiagrams)** — A 14-diagram design system for AI video client work (pipeline to funnel). Plain SVG, light and dark, no runtime. Steal the tokens, steal the rules.
 - **[MotionGraphicsStudio](https://github.com/madebysaira/MotionGraphicsStudio)** — Complete Claude Co-work setup for AI-powered motion graphics. Style sheets (Vox, Ink Vector), reusable skills, and production templates. Clone and start creating in 10 minutes.
 - **[PostProductionForAIVideo](https://github.com/madebysaira/PostProductionForAIVideo)** — Post-production templates and scripts for AI video polish (Remotion, ffmpeg, AE). Client-ready workflows that save hours per video.
 - **[VideoWorkflows](https://github.com/madebysaira/VideoWorkflows)** — Practical n8n pipelines and prompt kits for turning ideas into finished AI video without the manual grind. Full automation from schedule to Drive + Sheets.
@@ -85,6 +86,7 @@ New repos weekly. Star them if you find them useful!
 
 Writing about the work as I ship it:
 
+- [Every AI Video Delivery Comes With a Drawing](https://www.madebysaira.me/blog/ai-video-diagrams/) — August 2026
 - [I turned a Claude Co-work tutorial into a complete motion graphics studio](https://www.madebysaira.me/blog/motion-graphics-studio/) — July 2026
 - [AI Video Is 80% There. Here's the Last 20%](https://www.madebysaira.me/blog/post-production-polish/) — July 2026
 - [Video Workflows That Actually Ship](https://www.madebysaira.me/blog/video-workflows/) — July 2026
