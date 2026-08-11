@@ -240,6 +240,28 @@ Put the file at `public/images/blog/<name>.png`. Only add images that add someth
 The blog is text first by design, so a good post with no images is completely normal
 and often better. Never add an image just to fill space.
 
+For diagrams and screenshots that deserve a caption, the site styles a figure block
+(`border`, margins, caption typography), so prefer the raw-HTML form over a bare image:
+
+```markdown
+<figure>
+  <img src="/images/blog/ai-video-diagrams/pipeline.png" alt="what the image shows" />
+  <figcaption>The pipeline. Brief in, client folder out, one human gate before the render.</figcaption>
+</figure>
+```
+
+Notes that cost me a build cycle the first time:
+
+- `public/blog/*/index.html`, `public/images/blog/og/`, `public/blog/index.html`,
+  `public/blog/rss.xml` and `public/sitemap.xml` are **gitignored** and rebuilt on
+  every deploy by `scripts/build-blog.mjs`. Never commit them, never hand-edit them.
+  Source of truth is the Markdown plus your hand-placed PNGs.
+- Commit only `content/blog/<slug>.md` and any `public/images/blog/...` files.
+- Verify with `node scripts/build-blog.mjs` locally before pushing: the post page
+  will be regenerated at `public/blog/<slug>/index.html` (untracked, fine) and you
+  can grep it for your `<figure>` blocks. After the push lands, curl the live
+  image URLs and expect `200`.
+
 ---
 
 ## 8. Publish workflow (where to push and how)
