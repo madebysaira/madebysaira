@@ -79,8 +79,9 @@ I open-source my production workflows and prompt libraries to help fellow creato
 - **[n8n-ai-creator-pipelines](https://github.com/madebysaira/n8n-ai-creator-pipelines)** — Production-ready n8n workflows for AI studios (brief intake, batch generation, client review, delivery)
 - **[ai-motion-graphics-comparison](https://github.com/madebysaira/ai-motion-graphics-comparison)** — Model benchmarks for AI motion graphics (Omni Flash vs Remotion vs others). Decision tree, prompt templates, hybrid workflows.
 - **[CharacterConsistency](https://github.com/madebysaira/CharacterConsistency)** — Practical toolkit for locking characters across shots in commercial AI video. Locked style blocks, decision tree, model-specific prompts, full case studies.
+- **[CharacterBibleGenerator](https://github.com/madebysaira/CharacterBibleGenerator)** — A model-agnostic character bible, reference sheet workflow, and frame review checklist for recurring AI video characters.
 
-New repos weekly. Star them if you find them useful!
+New repos weekly! Star them if you find them useful!
 
 ## Journal
 
@@ -92,6 +93,7 @@ Writing about the work as I ship it:
 - [Video Workflows That Actually Ship](https://www.madebysaira.me/blog/video-workflows/) — July 2026
 - [I turned a Remotion masterclass into a kit you can run](https://www.madebysaira.me/blog/remotion-playbook/) — July 2026
 - [The Character Kit That Stopped Face Drift in My Client AI Videos](https://www.madebysaira.me/blog/character-kit/) — July 2026
+- [I built a character bible for AI video that survives past shot three](https://www.madebysaira.me/blog/character-bible-generator/) — August 2026
 - [How I Built My Portfolio Site, Start to Finish](https://www.madebysaira.me/blog/building-my-portfolio-with-ai/) — July 2026
 - [How I Actually Choose AI Models for Motion Graphics](https://www.madebysaira.me/blog/motion-graphics-comparison/) — July 2026
 - [Curated Prompts for Cinematic AI Video](https://www.madebysaira.me/blog/cinematic-ai-prompts/) — July 2026
