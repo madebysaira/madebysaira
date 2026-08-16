@@ -33,7 +33,7 @@ I could have made it a proper app with a build step and a framework. I did not, 
 
 The whole thing also stays inspectable. The model list lives in one object near the top of the script. Adding a model means adding a key and an assembly template. That is it. I want people to fork it and make it theirs.
 
-There is a demo live at [promptlab.madebysaira.me](https://promptlab.madebysaira.me) hosted on Cloudflare Pages, and the same file sits in the repo if you prefer to keep it local.
+The same file also runs on any static host. If you want a shareable URL for a client or a team, drop the folder on Cloudflare Pages or Netlify and it works as is, because there is no backend to configure.
 
 ## The decision tree is the part I use most
 
@@ -47,6 +47,6 @@ I do fewer renders per fix now, and each render tells me something. A bad result
 
 The tool does not make the prompts for you. It makes the testing honest, which is the part that was missing.
 
-If you test prompts by feel, give it one session. Open it, lock everything, change one thing, and see what your renders start telling you. The repo is [PromptLab on GitHub](https://github.com/madebysaira/PromptLab), and you can try the [live demo](https://promptlab.madebysaira.me) right now.
+If you test prompts by feel, give it one session. Open it, lock everything, change one thing, and see what your renders start telling you. The repo is [PromptLab on GitHub](https://github.com/madebysaira/PromptLab).
 
 If you want help building a testing discipline like this into your actual client workflow, [book a quick call](/#booking).
