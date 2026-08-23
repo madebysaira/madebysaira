@@ -83,6 +83,7 @@ I open-source my production workflows and prompt libraries to help fellow creato
 - **[ai-motion-graphics-comparison](https://github.com/madebysaira/ai-motion-graphics-comparison)** — Model benchmarks for AI motion graphics (Omni Flash vs Remotion vs others). Decision tree, prompt templates, hybrid workflows.
 - **[CharacterConsistency](https://github.com/madebysaira/CharacterConsistency)** — Practical toolkit for locking characters across shots in commercial AI video. Locked style blocks, decision tree, model-specific prompts, full case studies.
 - **[CharacterBibleGenerator](https://github.com/madebysaira/CharacterBibleGenerator)** — A model-agnostic character bible, reference sheet workflow, and frame review checklist for recurring AI video characters.
+- **[AIVideoCreditGuard](https://github.com/madebysaira/AIVideoCreditGuard)** — Offline pre-generation guard that lints prompts, estimates real cost (sticker × retries), and flags morph/consistency risks before Kling, Veo or Runway burns a credit. Companion to AIVideoQualityGate.
 
 New repos weekly! Star them if you find them useful!
 
@@ -90,6 +91,7 @@ New repos weekly! Star them if you find them useful!
 
 Writing about the work as I ship it:
 
+- [Before You Burn the Credit: A Pre-Generation Guard for AI Video](https://www.madebysaira.me/blog/credit-guard/) — August 2026
 - [I packaged the dark UI system I use for every client dashboard](https://www.madebysaira.me/blog/uiux-design-skills/) — August 2026
 - [The One Variable Rule That Fixed My AI Video Prompts](https://www.madebysaira.me/blog/prompt-lab/) — August 2026
 - [The Render Passed. The Video Still Wasn't Ready.](https://www.madebysaira.me/blog/video-quality-gate/) — August 2026
