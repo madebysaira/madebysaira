@@ -73,6 +73,7 @@ I open-source my production workflows and prompt libraries to help fellow creato
 - **[uiux-design-skills](https://github.com/madebysaira/uiux-design-skills)** — Premium dark design system as a reusable skill: flat solid colors, glassmorphism cards, Poppins, Font Awesome, real-time metric patterns, plus keyless curl recipes for icons, images, video, and fonts.
 - **[PromptLab](https://github.com/madebysaira/PromptLab)** — Browser-based lab for testing AI video prompts one variable at a time. Lock blocks, get clean-test verdicts, and copy model-formatted prompts for Kling, Veo, Runway, Luma, and Seedance. No install, no API keys, works offline.
 - **[AIVideoQualityGate](https://github.com/madebysaira/AIVideoQualityGate)** — Offline ffprobe and ffmpeg checks for AI video renders before client delivery. Catches missing audio, wrong formats, frozen sections, and loudness problems.
+- **[AIVideoAdherenceGate](https://github.com/madebysaira/AIVideoAdherenceGate)** — Post-render semantic + motion health gate. Checks whether a rendered clip actually honored the creative contract and is physically healthy (motion, morph-drift, lip-sync). Completes the AIVideo* safety net with CreditGuard + QualityGate. Offline-first, optional vision scoring.
 - **[AIVideoDiagrams](https://github.com/madebysaira/AIVideoDiagrams)** — A 14-diagram design system for AI video client work (pipeline to funnel). Plain SVG, light and dark, no runtime. Steal the tokens, steal the rules.
 - **[MotionGraphicsStudio](https://github.com/madebysaira/MotionGraphicsStudio)** — Complete Claude Co-work setup for AI-powered motion graphics. Style sheets (Vox, Ink Vector), reusable skills, and production templates. Clone and start creating in 10 minutes.
 - **[PostProductionForAIVideo](https://github.com/madebysaira/PostProductionForAIVideo)** — Post-production templates and scripts for AI video polish (Remotion, ffmpeg, AE). Client-ready workflows that save hours per video.
@@ -91,6 +92,7 @@ New repos weekly! Star them if you find them useful!
 
 Writing about the work as I ship it:
 
+- [The Gate That Was Missing: Did Your Clip Actually Do What You Asked?](https://www.madebysaira.me/blog/adherence-gate/) — August 2026
 - [Before You Burn the Credit: A Pre-Generation Guard for AI Video](https://www.madebysaira.me/blog/credit-guard/) — August 2026
 - [I packaged the dark UI system I use for every client dashboard](https://www.madebysaira.me/blog/uiux-design-skills/) — August 2026
 - [The One Variable Rule That Fixed My AI Video Prompts](https://www.madebysaira.me/blog/prompt-lab/) — August 2026
