@@ -86,6 +86,7 @@ I open-source my production workflows and prompt libraries to help fellow creato
 - **[CharacterConsistency](https://github.com/madebysaira/CharacterConsistency)** — Practical toolkit for locking characters across shots in commercial AI video. Locked style blocks, decision tree, model-specific prompts, full case studies.
 - **[CharacterBibleGenerator](https://github.com/madebysaira/CharacterBibleGenerator)** — A model-agnostic character bible, reference sheet workflow, and frame review checklist for recurring AI video characters.
 - **[AIVideoCreditGuard](https://github.com/madebysaira/AIVideoCreditGuard)** — Offline pre-generation guard that lints prompts, estimates real cost (sticker × retries), and flags morph/consistency risks before Kling, Veo or Runway burns a credit. Companion to AIVideoQualityGate.
+- **[AIVideoBatchQueue](https://github.com/madebysaira/AIVideoBatchQueue)** — Crash-safe, resumable batch queue for AI video generation jobs. One SQLite file of truth: atomic CAS claims (no double-runs), attempt-tracked retries, a hard credit budget ceiling (jobs that would overspend are `skipped`, never billed), and `export --jsonl` provenance. Provider-agnostic command templates — Kling, Veo, Runway, ComfyUI, or a shell one-liner. Zero required dependencies, Python 3.10+. 5th pillar of the AIVideo safety net.
 
 New repos weekly! Star them if you find them useful!
 
@@ -99,6 +100,7 @@ Writing about the work as I ship it:
 - [The One Variable Rule That Fixed My AI Video Prompts](https://www.madebysaira.me/blog/prompt-lab/) — August 2026
 - [The Render Passed. The Video Still Wasn't Ready.](https://www.madebysaira.me/blog/video-quality-gate/) — August 2026
 - [AIVideoRunbook: The Logbook That Turns Three Quality Gates Into One Pipeline](https://www.madebysaira.me/blog/runbook/) — September 2026 · [landing page](https://runbook.madebysaira.me)
+- [AIVideoBatchQueue: The Batch Queue That Keeps Your 30-Clip AI Video Run Alive Overnight](https://www.madebysaira.me/blog/batchqueue/) — September 2026
 - [Every AI Video Delivery Comes With a Drawing](https://www.madebysaira.me/blog/ai-video-diagrams/) — August 2026
 - [I turned a Claude Co-work tutorial into a complete motion graphics studio](https://www.madebysaira.me/blog/motion-graphics-studio/) — July 2026
 - [AI Video Is 80% There. Here's the Last 20%](https://www.madebysaira.me/blog/post-production-polish/) — July 2026
