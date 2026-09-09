@@ -87,6 +87,7 @@ I open-source my production workflows and prompt libraries to help fellow creato
 - **[CharacterBibleGenerator](https://github.com/madebysaira/CharacterBibleGenerator)** — A model-agnostic character bible, reference sheet workflow, and frame review checklist for recurring AI video characters.
 - **[AIVideoCreditGuard](https://github.com/madebysaira/AIVideoCreditGuard)** — Offline pre-generation guard that lints prompts, estimates real cost (sticker × retries), and flags morph/consistency risks before Kling, Veo or Runway burns a credit. Companion to AIVideoQualityGate.
 - **[AIVideoBatchQueue](https://github.com/madebysaira/AIVideoBatchQueue)** — Crash-safe, resumable batch queue for AI video generation jobs. One SQLite file of truth: atomic CAS claims (no double-runs), attempt-tracked retries, a hard credit budget ceiling (jobs that would overspend are `skipped`, never billed), and `export --jsonl` provenance. Provider-agnostic command templates — Kling, Veo, Runway, ComfyUI, or a shell one-liner. Zero required dependencies, Python 3.10+. 5th pillar of the AIVideo safety net.
+- **[ComfyUI-VideoGate](https://github.com/madebysaira/ComfyUI-VideoGate)** — Offline post-render video QC gate that runs inside ComfyUI graphs. Four nodes (Probe/Check/Report/Enforce) turn "the render finished" into "the render is deliverable": ffprobe facts, delivery profiles (client_delivery, social_vertical, archival_master), black-frame / frozen-frame / loudness checks, PASS/WARN/FAIL verdicts, reports, and an Enforce node that hard-stops the workflow on broken clips. No GPU, no cloud. 6th pillar of the AIVideo safety net.
 
 New repos weekly! Star them if you find them useful!
 
@@ -101,6 +102,7 @@ Writing about the work as I ship it:
 - [The Render Passed. The Video Still Wasn't Ready.](https://www.madebysaira.me/blog/video-quality-gate/) — August 2026
 - [AIVideoRunbook: The Logbook That Turns Three Quality Gates Into One Pipeline](https://www.madebysaira.me/blog/runbook/) — September 2026 · [landing page](https://runbook.madebysaira.me)
 - [AIVideoBatchQueue: The Batch Queue That Keeps Your 30-Clip AI Video Run Alive Overnight](https://www.madebysaira.me/blog/batchqueue/) — September 2026
+- [ComfyUI-VideoGate: The QC Gate That Stops Broken AI Video Before It Ships](https://www.madebysaira.me/blog/comfyui-videogate/) — September 2026
 - [Every AI Video Delivery Comes With a Drawing](https://www.madebysaira.me/blog/ai-video-diagrams/) — August 2026
 - [I turned a Claude Co-work tutorial into a complete motion graphics studio](https://www.madebysaira.me/blog/motion-graphics-studio/) — July 2026
 - [AI Video Is 80% There. Here's the Last 20%](https://www.madebysaira.me/blog/post-production-polish/) — July 2026

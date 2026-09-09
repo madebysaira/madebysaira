@@ -1,9 +1,9 @@
 ---
 title: "The Gate That Was Missing: Did Your Clip Actually Do What You Asked?"
-description: "I built the third gate in the AI-video safety net — AIVideoAdherenceGate. It checks, after you render, whether the clip actually honored the creative contract and is physically healthy: motion, morph, lip-sync. Offline-first, no API key needed for the core checks."
+description: "I built the third gate in the AI-video safety net — AIVideoAdherenceGate — then audited the published xyOps plugin, found two real bugs that would break it for users, and shipped a fixed v1.0.1. Offline-first post-render quality gate: motion, morph-drift, lip-sync. No API key needed for the core checks."
 date: 2026-08-27
 category: "Build Log"
-tags: ["AIVideoAdherenceGate", "AI Video", "Quality Control", "Kling", "Veo", "Runway", "Seedance", "ffmpeg", "n8n"]
+tags: ["AIVideoAdherenceGate", "AI Video", "Quality Control", "Kling", "Veo", "Runway", "Seedance", "ffmpeg", "n8n", "xyOps"]
 repo: "https://github.com/madebysaira/AIVideoAdherenceGate"
 ---
 
@@ -48,6 +48,34 @@ AdherenceGate moves that discovery from *after you paid and delivered* to *right
 
 It is also **universal**. It does not care which model made the clip — Kling, Veo, Runway, Seedance, Wan, Hunyuan, LTX, or a local ComfyUI stack. One checker for every output.
 
+## I audited the published plugin — and found two real bugs
+
+Because I packaged it as an **[xyOps plugin](https://github.com/madebysaira/xyops-ai-video-adherence-gate)** for the marketplace, I owed users more than "it works on my machine." So I audited the *released* artifact the way a real user would install it. I built the actual published wheel, installed it into a clean venv, and ran it. It crashed:
+
+```
+$ ai-video-adherence-gate --help
+Traceback (most recent call last):
+  File ".../bin/ai-video-adherence-gate", line 5, in <module>
+    from xyops_ai_video_adherence_gate.plugin import main_cli
+ImportError: cannot import name 'main_cli' from 'xyops_ai_video_adherence_gate.plugin'
+```
+
+Two concrete, user-blocking defects:
+
+1. **Broken entry point.** `pyproject.toml` declares the console script as `plugin:main_cli`, but `main_cli` only existed in my *uncommitted* working tree — not in the tagged `v1.0.0`. The published wheel's `entry_points.txt` pointed at a function that wasn't in the release. Anyone who installed it got an `ImportError` on first run.
+2. **Invalid marketplace launch command.** The `xyops.json` command was `uvx -y git+https://...@v1.0.0`. But `uvx` (Astral uv 0.12) rejects the `-y` flag — the syntax is `uvx --from <url> <script>`. The marketplace "Install" button would have failed to launch.
+
+There was also a smaller mismatch: `requires-python = ">=3.8"`, but the code uses PEP 604 `str | None` annotations (Python 3.10+). So I bumped it to `>=3.10`.
+
+I fixed all three, re-tagged as **v1.0.1**, and re-verified the *published* artifact end-to-end:
+
+- Built the wheel **from the `v1.0.1` tag** (no working-tree tricks).
+- Installed it into a fresh venv → console script runs cleanly.
+- Ran the plugin E2E suite against the tag → **3/3 pass**.
+- Core engine unit tests → **10/10 pass** on real ffmpeg-generated clips.
+
+If you grabbed the plugin before the fix, just reinstall — `v1.0.1` is the one that actually launches.
+
 ## Using it
 
 ```bash
@@ -70,6 +98,14 @@ Exit codes are built for pipelines:
 
 Drop it into an n8n workflow (see `examples/n8n.json`) and route on the exit code: pass → deliver, warn → eyeball, fail → regenerate before the client ever sees it.
 
+### As an xyOps plugin
+
+```bash
+uvx --from git+https://github.com/madebysaira/xyops-ai-video-adherence-gate@v1.0.1 ai-video-adherence-gate
+```
+
+It speaks the xyOps Wire Protocol (JSON over STDIN/STDOUT): live progress, a results table on the Job Details page, and a final pass/warn/fail code your workflow branches on.
+
 ## The honest caveats
 
 - `lipsync_health` is **approximate** — it compares audio activity to frame motion, not a phoneme-level aligner. It flags the obvious desyncs, not the subtle ones.
@@ -78,8 +114,18 @@ Drop it into an n8n workflow (see `examples/n8n.json`) and route on the exit cod
 
 Those caveats are the point: the gate is a **cheap first line of defense**, not a substitute for your eyes. It catches the 80% of failures that are obvious in hindsight and expensive in credits.
 
+## A proper landing page
+
+The repo README is documentation, but it isn't a story. So I built a dedicated, visual landing page that explains the whole thing — what it checks, how the safety net fits together, the exit-code contract, the xyOps wiring, and a full quick-start — in the same dark editorial theme as the Hermes Agent docs. It lives on its own subdomain:
+
+> **[adherence-gate.madebysaira.me](https://adherence-gate.madebysaira.me)** — the visual guide + docs for AIVideoAdherenceGate.
+
 ## Try it
 
-The repo is live: [github.com/madebysaira/AIVideoAdherenceGate](https://github.com/madebysaira/AIVideoAdherenceGate). It is Python 3 + ffmpeg, no required pip dependencies, 10 tests passing. Clone it, point it at your last render, and see how many of your "good" clips were quietly wrong.
+- Repo: [github.com/madebysaira/AIVideoAdherenceGate](https://github.com/madebysaira/AIVideoAdherenceGate) (Python 3 + ffmpeg, no required pip deps, 10 tests passing)
+- xyOps plugin: [github.com/madebysaira/xyops-ai-video-adherence-gate](https://github.com/madebysaira/xyops-ai-video-adherence-gate) — install `v1.0.1`
+- Landing page: [adherence-gate.madebysaira.me](https://adherence-gate.madebysaira.me)
+
+Clone it, point it at your last render, and see how many of your "good" clips were quietly wrong.
 
 The safety net is now three gates deep. Lint before you pay, probe after you render, and — finally — check that the clip actually did the thing.
