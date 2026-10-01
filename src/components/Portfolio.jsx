@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { Globe } from 'lucide-react';
 import SpotlightCard from './ui/SpotlightCard';
 import Reveal from './ui/Reveal';
+import linkedinPosts from '../data/linkedin-posts.json';
 
 /* ─── Icons ─── */
 const InstagramIcon = ({ size = 18 }) => (
@@ -318,37 +319,10 @@ export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('campaigns');
   const containerRef = useRef(null);
 
-  /* LinkedIn posts — videos downloaded locally from LinkedIn's CDN.
-     All are 720×1280 (9:16 portrait). Clicking CTA opens the original post. */
-  const linkedinPosts = [
-    {
-      title: "Tanishq Jewellery Spec Campaign",
-      subtitle: "A cinematic jewellery spot, made entirely with AI",
-      videoUrl: "/videos/tanishq.mp4",
-      poster: "/images/posters/tanishq.jpg",
-      url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_tanishq-aiadvertising-aivideo-activity-7465417409286344704-v9JY",
-      width: 720,
-      height: 1280,
-    },
-    {
-      title: "Horlicks Pro Fitness Spec Campaign",
-      subtitle: "A fitness story told in one short spec ad",
-      videoUrl: "/videos/horlicks.mp4",
-      poster: "/images/posters/horlicks.jpg",
-      url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_specad-aiadvertising-creativedirection-activity-7465438959947632642-DOwl",
-      width: 720,
-      height: 1280,
-    },
-    {
-      title: "Campa Cola Spec Campaign",
-      subtitle: "An eight second retro cola concept",
-      videoUrl: "/videos/campacola.mp4",
-      poster: "/images/posters/campacola.jpg",
-      url: "https://www.linkedin.com/posts/sagarika-sultana-751600311_campacola-aiadvertising-aivideo-activity-7465407257623666688-VfiS",
-      width: 720,
-      height: 1280,
-    },
-  ];
+  /* LinkedIn posts — newest-first, max 3.
+     Source of truth: src/data/linkedin-posts.json, kept fresh by
+     scripts/sync-linkedin.mjs + .github/workflows/sync-linkedin.yml.
+     Videos/posters are local files (no expiring LinkedIn CDN links). */
 
   const instagramReels = [
     {

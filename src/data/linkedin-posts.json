@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "samsung-zfold",
+    "title": "Samsung Galaxy Z Fold Spec Ad",
+    "subtitle": "A foldable screen, turned into the experience itself",
+    "url": "https://www.linkedin.com/posts/sagarika-sultana-751600311_samsunggalaxy-galaxyzfold-specad-activity-7510618722487926784-hvSX",
+    "videoUrl": "/videos/samsung-zfold.mp4",
+    "poster": "/images/posters/samsung-zfold.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "slug": "medicube",
+    "title": "Medicube UGC-Style Spec Ad",
+    "subtitle": "Same AI tools, a completely different creative direction",
+    "url": "https://www.linkedin.com/posts/sagarika-sultana-751600311_aiadvertising-creativeai-aivideo-activity-7510029610852687872-6kWN",
+    "videoUrl": "/videos/medicube.mp4",
+    "poster": "/images/posters/medicube.jpg",
+    "width": 720,
+    "height": 1080
+  },
+  {
+    "slug": "tanishq",
+    "title": "Tanishq Jewellery Spec Campaign",
+    "subtitle": "A cinematic jewellery spot, made entirely with AI",
+    "url": "https://www.linkedin.com/posts/sagarika-sultana-751600311_tanishq-aiadvertising-aivideo-activity-7465417409286344704-v9JY",
+    "videoUrl": "/videos/tanishq.mp4",
+    "poster": "/images/posters/tanishq.jpg",
+    "width": 720,
+    "height": 1280
+  }
+]
