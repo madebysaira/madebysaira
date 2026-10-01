@@ -7,6 +7,11 @@ never depends on expiring LinkedIn CDN links.
 
 ## Day-to-day use (no setup needed)
 
+**Option 0 — send the link to Hermes (easiest):**
+Post on LinkedIn → Share → Copy link → paste it here in chat.
+Hermes downloads the video, updates the JSON, generates the poster,
+pushes to `main`, and the site redeploys. ~10 seconds, nothing to install.
+
 **Option A — paste a URL (easiest):**
 1. GitHub → repo → **Actions** → **Sync LinkedIn videos** → **Run workflow**
 2. Paste the new post, one per line:
