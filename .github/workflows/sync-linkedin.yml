@@ -1,0 +1,70 @@
+name: Sync LinkedIn videos
+
+# Keeps the portfolio's latest 3 LinkedIn campaign videos fresh.
+# - Manual: Actions → "Sync LinkedIn videos" → Run workflow → paste new post URL(s).
+# - Push: editing src/data/linkedin-posts.json re-runs downloads/posters.
+# - Schedule: daily heal (re-downloads missing assets; with LINKEDIN_*
+#   secrets set it also auto-discovers new video posts via the official API).
+on:
+  workflow_dispatch:
+    inputs:
+      new_posts:
+        description: "New LinkedIn post(s), one per line:  URL | Title | Subtitle  (title/subtitle optional)"
+        required: false
+        type: string
+  push:
+    paths:
+      - "src/data/linkedin-posts.json"
+      - "scripts/sync-linkedin.mjs"
+  schedule:
+    - cron: "0 2 * * *" # daily 02:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install downloaders
+        run: |
+          pip install -q yt-dlp
+          ffmpeg -version | head -n 1
+          yt-dlp --version
+
+      - name: Sync videos (latest 3)
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.new_posts }}" ]; then
+            while IFS= read -r line; do
+              [ -z "$line" ] && continue
+              ARGS="$ARGS --add $line"
+            done <<< "${{ inputs.new_posts }}"
+          fi
+          # shellcheck disable=SC2086
+          node scripts/sync-linkedin.mjs $ARGS
+
+      - name: Verify site still builds
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/linkedin-posts.json public/videos public/images/posters
+          git diff --cached --quiet && echo "No changes." && exit 0
+          git commit -m "chore(portfolio): sync latest LinkedIn videos (keep 3)"
+          git push

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "tanishq",
+    "title": "Tanishq Jewellery Spec Campaign",
+    "subtitle": "A cinematic jewellery spot, made entirely with AI",
+    "url": "https://www.linkedin.com/posts/sagarika-sultana-751600311_tanishq-aiadvertising-aivideo-activity-7465417409286344704-v9JY",
+    "videoUrl": "/videos/tanishq.mp4",
+    "poster": "/images/posters/tanishq.jpg",
+    "width": 720,
+    "height": 1280
+  },
+  {
+    "slug": "horlicks",
+    "title": "Horlicks Pro Fitness Spec Campaign",
+    "subtitle": "A fitness story told in one short spec ad",
+    "url": "https://www.linkedin.com/posts/sagarika-sultana-751600311_specad-aiadvertising-creativedirection-activity-7465438959947632642-DOwl",
+    "videoUrl": "/videos/horlicks.mp4",
+    "poster": "/images/posters/horlicks.jpg",
+    "width": 640,
+    "height": 1138
+  },
+  {
+    "slug": "campacola",
+    "title": "Campa Cola Spec Campaign",
+    "subtitle": "An eight second retro cola concept",
+    "url": "https://www.linkedin.com/posts/sagarika-sultana-751600311_campacola-aiadvertising-aivideo-activity-7465407257623666688-VfiS",
+    "videoUrl": "/videos/campacola.mp4",
+    "poster": "/images/posters/campacola.jpg",
+    "width": 640,
+    "height": 1138
+  }
+]
