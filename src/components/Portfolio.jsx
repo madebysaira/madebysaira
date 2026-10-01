@@ -81,20 +81,23 @@ function VideoCard({ post }) {
 
   return (
     <SpotlightCard className="w-full h-full flex flex-col group p-4 bg-cosmic-navy/30 border border-white/10 hover:border-white/25 transition-all duration-300" spotlightColor="rgba(120, 160, 255, 0.18)">
-      {/* Header */}
-      <div className="mb-3">
-        <h3 className="text-sm font-bold text-white tracking-tight mb-1">
+      {/* Header — fixed min-height + clamped lines so every card's
+          video starts at the same y, whatever the copy wraps to. */}
+      <div className="mb-3 min-h-[56px]">
+        <h3 className="text-sm font-bold text-white tracking-tight mb-1 truncate">
           {post.title}
         </h3>
-        <p className="text-[10px] text-slate-400 font-mono tracking-wide">
+        <p className="text-[10px] text-slate-400 font-mono tracking-wide line-clamp-2">
           {post.subtitle}
         </p>
       </div>
 
-      {/* Video Container */}
+      {/* Video Container — fixed 3:4 frame for every card so the grid
+          stays aligned no matter the source aspect (9:16, 16:9, …).
+          object-contain never crops ad creative (text overlays stay intact);
+          letterbox bars melt into the black frame. */}
       <div
-        className="relative w-full overflow-hidden sharp-border bg-black mb-4 cursor-pointer"
-        style={{ aspectRatio: `${post.width || 720} / ${post.height || 1280}` }}
+        className="relative w-full overflow-hidden sharp-border bg-black mb-4 cursor-pointer aspect-[3/4] flex items-center justify-center"
         onMouseMove={handleMouseMove}
         onMouseLeave={() => playing && setShowControls(false)}
         onClick={togglePlay}
@@ -111,7 +114,7 @@ function VideoCard({ post }) {
           onEnded={handleEnded}
           playsInline
           preload="metadata"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
 
         {/* Play/Pause Overlay */}
